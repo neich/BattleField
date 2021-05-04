@@ -1,0 +1,53 @@
+<Castle>
+<Orientation>[0.0, -1.0]</Orientation>
+<Shape>
+<Vertex>
+<Point>[517.025045656, 1039.89143111]</Point>
+<TowerType>RoundedTower</TowerType>
+</Vertex>
+<Vertex>
+<Point>[612.475780258, 604.036355663]</Point>
+<TowerType>Bastion</TowerType>
+</Vertex>
+<Vertex>
+<Point>[711.185389335, 528.877809158]</Point>
+<TowerType>RoundedTower</TowerType>
+</Vertex>
+<Vertex>
+<Point>[1007.91929285, 392.861563181]</Point>
+<TowerType>RoundedTower</TowerType>
+</Vertex>
+<Vertex>
+<Point>[1323.13873804, 549.257165329]</Point>
+<TowerType>RoundedTower</TowerType>
+</Vertex>
+<Vertex>
+<Point>[1413.98323383, 666.607442508]</Point>
+<TowerType>Bastion</TowerType>
+</Vertex>
+<Vertex>
+<Point>[1527.39274911, 940.267434413]</Point>
+<TowerType>Bastion</TowerType>
+</Vertex>
+<Vertex>
+<Point>[1504.54601581, 1041.84649645]</Point>
+<TowerType>RoundedTower</TowerType>
+</Vertex>
+<Vertex>
+<Point>[1356.89502231, 1226.02317972]</Point>
+<TowerType>Bastion</TowerType>
+</Vertex>
+<Vertex>
+<Point>[1032.01454688, 1433.5146155]</Point>
+<TowerType>RoundedTower</TowerType>
+</Vertex>
+<Vertex>
+<Point>[752.264701881, 1348.63817367]</Point>
+<TowerType>Bastion</TowerType>
+</Vertex>
+<Vertex>
+<Point>[683.967350783, 1288.27140671]</Point>
+<TowerType>Bastion</TowerType>
+</Vertex>
+</Shape>
+</Castle>

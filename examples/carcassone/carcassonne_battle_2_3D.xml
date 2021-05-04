@@ -1,0 +1,23 @@
+<!-- 3D exportation settings -->
+
+
+<Export>
+
+    <ExportFilePath>../3Doutputs/Carcassonne/battle_2/</ExportFilePath>
+
+    <Walls>1</Walls>
+    <Towers>1</Towers>
+    <StarFortress>
+        <Ravelins>1</Ravelins>
+        <HalfMoons>1</HalfMoons>
+        <CovertWay>1</CovertWay>
+    </StarFortress>
+
+    <Houses>
+        <Activate>1</Activate>
+        <ExportToExtraFile>1</ExportToExtraFile>
+        <ExportExtraFileSufix>_houses</ExportExtraFileSufix>
+    </Houses>
+
+
+</Export>

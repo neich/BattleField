@@ -1,0 +1,233 @@
+Scale
+-----
+
+The main image has a reference on 200m -> 183px on image
+Form factor = 1.092
+Considering a square image about 1414x1414 pixels -> 1545m x 1545m
+
+A best option is to apply some margin, and center the image. Then, an image of 1600x1600px -> 1748x1748m ~ 1750x1750m (to allow 10m^2 battlefield cells)
+
+
+First considerations - History
+------------------------------
+
+Now, get the old city taking the vertices coordinates from the first curtainwall.
+Note that the first design is from roman time. In that time, there wasn't towers. But the system doesn't allow to create curtain walls without towers. Before choose any option, lets consider this situation:
+
+Start: 1 bc -> No towers
+       
+       Attacks between:
+	  Sarrains: 717
+	  Carlongis: 785
+	  Andalusins: 793, 827, 985
+	      
+       
+       11 ac -> Towers
+
+
+So here we can consider two simulations:
+
+  - Roman shape, starting at 1 bc (in fact, starting at 6 ac should be enough), without city expansion and performing battles, from which the towers coul be constructed.
+  - From sXI (feudal), starting with a shape with full towers
+  
+  
+  
+  
+Feudal
+------
+
+Starts at XI century.
+Uses an initial curtain wall of inncer city with towers.
+The kind of towers is mixed, so the time range for this feature must to be edited.
+
+First problems:
+
+  - There are corners without towers
+  - There are towers on colinear walls
+  
+
+Initial coordinates:
+
+Pixels:			Coordinates:
+441	664		481.9672131148	725.6830601093
+457	634		499.4535519126	692.8961748634
+469	604		512.5683060109	660.1092896175
+484	571		528.9617486339	624.043715847
+501	551		547.5409836066	602.1857923497
+516	532		563.9344262295	581.4207650273
+532	520		581.4207650273	568.306010929
+549	461		600	503.825136612
+573	420		626.2295081967	459.0163934426
+563	470		615.3005464481	513.6612021858
+573	493		626.2295081967	538.7978142077
+583	519		637.1584699454	567.2131147541
+601	550		656.8306010929	601.0928961749
+613	583		669.9453551913	637.1584699454
+642	625		701.6393442623	683.0601092896
+643	648		702.7322404372	708.1967213115
+677	669		739.8907103825	731.1475409836
+704	687		769.3989071038	750.8196721311
+692	731		756.2841530055	798.9071038251
+663	740		724.5901639344	808.7431693989
+628	753		686.3387978142	822.9508196721
+568	763		620.7650273224	833.8797814208
+559	769		610.9289617486	840.4371584699
+497	773		543.1693989071	844.8087431694
+470	774		513.6612021858	845.9016393443
+471	742		514.7540983607	810.9289617486
+470	719		513.6612021858	785.7923497268
+468	669		511.4754098361	731.1475409836
+473	676		516.9398907104	738.7978142077
+
+
+Too much data with too small walls. Avoiding minor details, the new set of coordinates is:
+
+Pixels			Coordinates				Tower
+439	665		479.781420765	726.7759562842		Squared
+481	571		525.6830601093	624.043715847		Squared
+543	501		593.4426229508	547.5409836066
+547	459		597.8142076503	501.6393442623
+573	419		626.2295081967	457.9234972678		Rounded
+566	470		618.5792349727	513.6612021858
+601	547		656.8306010929	597.8142076503
+617	605		674.3169398907	661.2021857924
+644	648		703.825136612	708.1967213115
+707	682		772.6775956284	745.3551912568		Squared
+693	732		757.3770491803	800			Squared
+587	764		641.5300546448	834.9726775956		Squared
+469	772		512.5683060109	843.7158469945
+469	679		512.5683060109	742.0765027322
+
+
+WARNING: New settings format
+
+<Castle>
+  <Shape>		// Optional
+    <Vertex>
+                <Point>[641.53, 834.972]</Point>
+                <TowerType>Squared</TowerType>		// Optional-> Vertex without tower (bastions dont allowed)
+            </Vertex>
+
+           
+and OldCity becomes optional.
+In addition, Castle orientation must to be specified before Shape
+
+
+
+The towers should be smaller than default values. From pixels measure, they should be 8.75m. But these are measures taken on a non-dimensioned plan view. Comparing the wall width (see next) in the draw, the tower should be bigger, by example, 12m.
+In addition, the curtain wall, at XI century, seems to use a 4m width walls, with 3.5m of walkway and 2m of merlon (carolingian ideal wall)
+
+Lets take another image to solve this case: girona_map_sXI
+The scale relation with pixels is 117pixels -> 60m
+
+Measuring one tower in this image shows a size of 17 pixels, so 8.71m, and walls about 7pixels width, so 3.5m ~ 4m, that matches with the carolingian wall
+
+
+
+First expansion
+----------------
+
+Until 1366.
+
+Calculate the expansion vectors measuring segments on the image girona_map_curtainwall.
+
+(pixels) 728, 646  -  1026, 765 -> [298, 119] -> [0.9286, 0.37088]
+
+The expansion using only directions is not aplicable. We need a new expansion algorithm, based on a expansion segment origin.
+
+
+WARNING: New gamesettings.xml format
+
+          <Evolution>
+            <TimeRange>[1100, 1200]</TimeRange>
+            <Direction>[0.9286, -0.37088]</Direction>
+            <HousesPerYear>1</HousesPerYear>
+            <SegmentBase>
+                <P1>[842.62, 612.02]</P1>
+                <P2>[775.95, 809.83]</P2>
+            </SegmentBase>
+        </Evolution>
+
+        
+ This runs! Check layers on image to know the choosen data for the evolution.
+ 
+ 
+ Other changes:
+ 
+ Increased the CurtainWallOldCityMargin to 30.0
+ Increased the Minimum expansion wall length to 50.0 -> Some houses fall off the bounds, but the shape is better
+ 
+ 
+ 
+ Second expansion
+ ----------------
+ 
+ Repeat the same than first expansion (see arrows in image).
+ 
+ PROBLEM: The north and south expansions go through the same years: until the 1366 for the south expansion and until the 1376 for the north expansion. 
+	  When a expanion is computed, it uses all new houses, so at 1366 tries to create a curtain wall with all houses, at the north and at the south.
+	  
+	  Proposed solution:
+	      Create groups of expansions. A curtain wall will be created only over houses created by a list of identifiers, where each identifier is assigned to an expansion
+	      
+	      
+	      
+	      <CityEvolutions>
+	      
+		<Group>
+		  <ID>1</ID>
+		  <Evolutions>
+		    <Evolution>
+		    .....
+		    </Evolution>
+		    <Evolution>
+		    ...
+		  </Evolutions>
+		    
+	    <CityExpansion>
+	      <Expansion>
+		  <Year>1386</Year>
+		  <GroupID>2</GroupID>
+	      </Expansion>
+        
+	    
+		    
+
+	
+	      
+The river
+----------
+
+It will be emulated with the moat data. To do it we need some kind of moat. But the moat is unique and deployed around the castle. In addition, it is considered when the new curtain wall is created
+The best solution is to create a new kind of object, a River, and mark all battlefield cells that match with it, like moats. In fact, once a cell is marked as river, it is like moat
+To do it we modify the XML with this new format
+
+
+  <Battlefield>
+  ....
+        <Rivers>
+	       <Trace>
+	           <Width>20.0</Width>
+	           <Polyline>
+	               <Vertex>[200.0, 200.0]</Vertex>
+	               <Vertex>[300.0, 300.0]</Vertex>
+	               <Vertex>[400.0, 400.0]</Vertex>
+	           </Polyline>
+	       </Trace>
+	       <Trace>
+	       ....
+       </Rivers>
+
+ 
+Note that we don't need the depth value, so the river ever has water, and only the global settings about penalty  movement on water is applied, like is in moats
+
+
+        
+
+            
+            
+
+
+
+
+

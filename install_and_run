@@ -1,0 +1,19 @@
+1.Install python 2.7.*
+
+2.go to the python folder (e.g., c:\Python27) and there execute
+python.exe -m pip install --user numpy scipy
+
+3.Install Polygon2 from Polygon2-2.0.8.win-amd64-py2.7.exe
+
+4. Install LiClipse. Run LiClipse
+
+5.Create a project from Filesystem. Select the Battlefield SRC folder
+
+6.It'll recognize the project. Follow though, and when selecting Python, select the 2.7 installatin from above. Add all dependencies to the PYTHONPATH.
+
+7.After finnishing, open the src/execute.py file. Try to execute it.
+
+8. from the window that open, select "Python run" to create a new "New_Configuration". Rename it to "Battlefiled" (on the very top of the window). Select the Project -> SRC
+9. The main module is src/execute.py
+
+10. apply and run (and run again!)

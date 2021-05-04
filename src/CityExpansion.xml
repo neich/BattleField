@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--  Game: City expansion XML template -->
+<!--  All parameters are mandatory except for those that are marked as optional -->
+
+
+<Game>
+    
+    <Type>CityExpansion</Type>				<!-- Available types: CityExpansion, Battle. Required -->
+    
+    <!-- Time Range, in centuries. The starting year will be the first year of first century. [8,19] by default  -->
+    <TimeRange>[9,18]</TimeRange>
+    
+    
+    <!-- Battlefield settings -->
+    <Battlefield>
+        <Bounding>2000.0</Bounding>							<!-- Battlefield size (square). Required -->
+        <CellSize>10.0</CellSize>							<!-- Cellsize (square). Required -->
+    </Battlefield>
+    
+    
+    <!-- Initial castle data -->
+    <Castle>
+    	<Orientation>[0.0, -1.0]</Orientation>	    		<!-- Castle front direction on the battlefield (used as reference to construct squared towers
+    															 Optional (taken from global settings) -->
+        
+        <!-- Set of initial houses. The curtain wall is constructed from them. Required -->
+        <OldCity>
+            <House>[100.0, 250.0]</House>					<!-- House 2D central point. See global settings to configure the house size -->
+            <House>[110.0, 300.0]</House>
+            <House>[120.0, 350.0]</House>
+            <House>[150.0, 300.0]</House>
+            <House>[160.0, 340.0]</House>
+            <House>[180.0, 270.0]</House>
+            <House>[150.0, 250.0]</House>
+            <House>[230.0, 330.0]</House>
+            <House>[200.0, 230.0]</House>
+            <House>[200.0, 292.0]</House>
+            <House>[330.0, 250.0]</House>
+            <House>[290.0, 250.0]</House>
+            <House>[255.0, 343.0]</House>
+            <House>[280.0, 304.0]</House>
+            <House>[238.0, 250.0]</House>
+            <House>[243.0, 280.0]</House>
+       </OldCity>
+        
+        
+    </Castle>
+    
+    
+    <!-- City evolution patterns (one or more) -->
+    <CityEvolutions>
+        
+		<Group>
+            <ID>1</ID>
+            <Evolutions>
+                <Evolution>
+                    <TimeRange>[850, 1100]</TimeRange>				<!-- Time range in years. Required -->
+                    <Direction>[-0.3, -0.5]</Direction>				<!-- Expansion direction (2D vector). Required -->
+                    <HousesPerYear>1</HousesPerYear>				<!-- Houses per year. More houses, more the city grows. 1 by default -->
+                </Evolution>
+
+                <Evolution>
+                    <TimeRange>[950, 1100]</TimeRange>
+                    <Direction>[0.7, -0.7]</Direction>
+                    <HousesPerYear>1</HousesPerYear>
+                </Evolution>
+
+ 	        </Evolutions>
+   		</Group>
+
+		<Group>
+            <ID>2</ID>
+            <Evolutions>
+                <Evolution>
+                    <TimeRange>[1103, 1300]</TimeRange>
+                    <Direction>[0.7, -0.7]</Direction>
+                    <HousesPerYear>1</HousesPerYear>
+                </Evolution>
+ 	        </Evolutions>
+   		</Group>
+
+    </CityEvolutions>
+    
+    
+    
+    
+    <!-- City expansion (new curtain wall) years (one or more). Optional -->
+    <CityExpansion>
+        
+        <WallDimensions>[80.0, 150.0]</WallDimensions>		<!-- Minimum and maximum wall dimensions for each expansion. Optional -->
+        
+        <!-- Expansion years. Optional -->
+        <Expansion>
+            <Year>1000</Year>
+            <GroupID>1</GroupID>
+        </Expansion>
+        <Expansion>
+            <Year>1200</Year>
+            <GroupID>2</GroupID>
+        </Expansion>
+         
+    </CityExpansion>
+    
+    
+    
+    
+    
+    <!-- Battle events -->
+    <BattleEvents>
+        
+        <Battle>
+            <Year>975</Year>
+            <Simulations>3</Simulations>			<!-- Number of battle simulations. If is 1, the battle is displayed. Otherwise, it runs in background, and shows at the end
+            											 a set of statistical results -->
+            <!-- Defines the defender army -->
+            <!-- Each entry is an array with the battalion type and the troops number. Avaliable defender battalions are: Archers and Cannons -->
+            <Defenders>
+                <Battalion>["Archers", 600]</Battalion>			<!-- Dont forget to wrap strings with "" -->
+              	<Battalion>["Cannons", 10]</Battalion>
+            </Defenders>	
+            
+            
+            <!-- Defines the attacker army -->
+            <!-- Its structured as directional flanks, with a set of battalions for each one -->
+            <Attackers>
+                
+                <Flank>
+                    <Direction>[0.7, 0.7]</Direction>		<!-- Attack direction. If Origin is not specified, the flank advances only in a directional way. Otherwise, in a ray way -->
+                    <Origin>[100.0, 100.0]</Origin>			<!-- 2D coordinates of attack origin. Optional -->
+                    <StandDistance>100.0</StandDistance>	<!-- Distance from castle where the attackers start the battle -->
+                    
+                    <!-- List of flank battalions -->
+                    <!-- WARNING: Be aware about the battalion definition order. First battalion will be deployed first on the battlefield, and the others will be 
+				                  deployed rear them. Note that this allows to define the same kind of troops at different levels or attack lines. Note too that some kind of 
+				                  troops have preferences over the others and over this sorting too, such are the cannons or the siege towers. -->
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>Infantry</Type>				<!-- Type of battalion. Available types: Infantry, Archers, Cannons, SiegeTowers -->
+	                        <Number>100</Number>				<!-- Troops number -->
+	                        <BattalionSize>20</BattalionSize>	<!-- Maximum number of troops per battalion. Optional. If it is not specified, the battalions will be filled with the
+	                        										 maximum size, related with the battlefield cell (a battalion cannot be greater than a battlefield cell -->
+	                        <GroupSize>1</GroupSize>			<!-- Allows to deploy groups of battalions with a distance between them defined by GroupsDistance. 
+	                        										 This parameter is usefull for deploy cannons batteries. Optional. 1 by default -->
+	                        <GroupDistance>1.0</GroupDistance>	<!-- Distance between groups. Optional -->						 
+	                    </Battalion>
+	                    
+	                    
+	                    <Battalion>
+	                        <Type>Cannons</Type>
+	                        <Number>50</Number>
+	                        <BattalionSize>5</BattalionSize>
+	                        <GroupSize>3</GroupSize>
+	                        <GroupDistance>30.0</GroupDistance>
+	                    </Battalion>
+	                    
+	                    <Battalion>
+	                        <Type>"SiegeTowers"</Type>
+	                        <Number>1</Number>
+	                        <BattalionSize>1</BattalionSize>
+	                    </Battalion>
+	                </Battalions>
+                    
+                </Flank>
+                    
+               	<Flank>
+               	    
+               	    <Direction>[-0.7, 0.7]</Direction>
+               	    <StandDistance>100.0</StandDistance>
+               	    
+               	    <Battalions>
+	               	    <Battalion>
+	               	        <Type>"Infantry"</Type>
+	               	        <Number>100</Number>
+	               	    </Battalion>
+	               	    
+	               	    <Battalion>
+	               	        <Type>"Archers"</Type>
+	               	        <Number>50</Number>
+	               	        <BattalionSize>5</BattalionSize>
+	              	    </Battalion>
+	               	    
+	               	    <Battalion>
+	               	    	<Type>"Cannons"</Type>
+	               	    	<Number>9</Number>
+	               	    	<BattalionSize>1</BattalionSize>
+	               	    	<GroupSize>3</GroupSize>
+	               	    	<GroupDistance>30.0</GroupDistance>
+	               	    </Battalion>
+               	    </Battalions>
+               	    
+               	</Flank>
+                
+            </Attackers>
+            
+             
+        </Battle>
+        
+        
+        <Battle>
+            <Year>1105</Year>
+            <Simulations>1</Simulations>
+            
+            <Defenders>
+                <Battalion>["Archers", 2000]</Battalion>
+                <Battalion>["Cannons", 50]</Battalion>                
+            </Defenders>
+            
+            <Attackers>
+                <Flank>
+               	    <Direction>[0.7, -0.7]</Direction>
+               	    <StandDistance>50.0</StandDistance>
+               	    
+               	    <Battalions>
+	               	    <Battalion>
+	               	        <Type>"Cannons"</Type>
+	               	        <Number>9</Number>
+	               	        <BattalionSize>1</BattalionSize>
+	               	        <GroupSize>3</GroupSize>
+	               	        <GroupDistance>30.0</GroupDistance>
+	               	    </Battalion>
+	               	    
+	               	    <Battalion>
+	               	        <Type>"Infantry"</Type>
+	               	        <Number>300</Number>
+	               	    </Battalion>
+	                    
+	               	    <Battalion>
+	               	        <Type>"Archers"</Type>
+	               	        <Number>200</Number>
+	               	        <BattalionSize>5</BattalionSize>
+	               	    </Battalion>
+	
+	               		<Battalion>
+	               			<Type>"Infantry"</Type>
+	               			<Number>500</Number>    
+	               		</Battalion>
+	               		
+	               		<Battalion>
+	               		    <Type>"SiegeTowers"</Type>
+	               		    <Number>5</Number>
+	               		    <GroupDistance>50.0</GroupDistance>
+	               		</Battalion>
+               	    </Battalions>
+	               				    
+            	</Flank>          
+            </Attackers>
+ 
+            
+            
+        </Battle>
+        
+        
+    </BattleEvents>
+    
+    
+    <!-- Evolution checkings. Just printing out the castle evolution history. Optional -->
+    <ExpansionCheckings>
+        <Year>1107</Year>
+        <Year>1100</Year>
+    </ExpansionCheckings>
+    
+    
+    <!-- StarFortress construction. Optional -->
+    <!-- All parameters are optional. The default values are stored into global settings xml -->
+    <StarFortress>
+ 
+        <Activate>True</Activate>						<!-- The star fortress wont be created if StarFortress tag isnt specified or if this tag is False. If you want to activate
+        													 the star fortress but using all standard parameters, just set to True this tag -->
+        
+    	<BastionRadius>40.0</BastionRadius>				<!-- Bastion size (radius of circle used to construct it). Used only if initially towers are converted to bastions -->
+        
+        <Ravelin>
+            <Radius>25.0</Radius>						<!-- Radius of circle used to construct the ravelin (like in bastions) -->
+            <MinWidth>15.0</MinWidth>					<!-- Minimum ravelin width. This avoids too thin ravelins -->
+        </Ravelin>
+        
+        <HalfMoon>
+			<Activate>True</Activate>
+            <CircleOffset>5.0</CircleOffset>			<!-- Distance between halfmoon center and halfmoon circle radius -->
+            <Length>45.0</Length>						<!-- Distance from the halfmoon circle center to the halfmoon jag -->
+        </HalfMoon>
+        
+        <CovertWay>
+            <Thickness>10.0</Thickness>							<!-- Thickness of the covertway -->
+            <Offset>15.0</Offset>								<!-- Distance from the halfmoons and ravelins -->
+            <HasPlacesOfArms>True</HasPlacesOfArms>
+            <PlacesOfArmsLength>20.0</PlacesOfArmsLength>		<!-- Length of places of arms side -->
+        </CovertWay>
+        
+        <GlacisThickness>30.0</GlacisThickness>			<!-- Glacis width -->
+        
+    </StarFortress>
+    
+ 
+    
+    
+    
+</Game>

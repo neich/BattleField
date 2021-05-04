@@ -1,0 +1,157 @@
+/usr/bin/python2.7 /home/mussoltrek/pycharm-community-3.4.1/helpers/pydev/pydevd.py --multiproc --client 127.0.0.1 --port 56310 --file /home/mussoltrek/workspace/Battles/src/execute.py
+Connected to pydev debugger (build 135.1057)
+pydev debugger: process 23641 is connecting
+
+CASTLE EXPANSION EVENT (1376)
+Extending castle
+CASTLE EXPANSION EVENT (1386)
+Extending castle
+CASTLE EXPANSION EVENT (1400)
+Extending castle
+WARNING: CastleSet::ConstructCurtainWall -> Castle set with more than one castle. Choosing the commander
+WARNING: CastleSet::Evolve -> Castle set with more than one castle. Choosing the commander
+Castle Expansion History:
+     Year: 1376  Due a battle: False
+     Year: 1386  Due a battle: False
+     Year: 1400  Due a battle: False
+Castle Expansion History:
+     Year: 1376  Due a battle: False
+     Year: 1386  Due a battle: False
+     Year: 1400  Due a battle: False
+BATTLE EVENT (1600)
+Starting battle...
+  booummm!....................
+....Attackers victory!!!
+Reason: The Wall_42 has been climbed at [268.53191199, 718.715066529, 5.0]
+Spent time: 24 rounds
+  honour!....................
+.....Attackers victory!!!
+Reason: The Wall_72 has been climbed at [1233.22213424, 1312.63335491, 12.0]
+Spent time: 25 rounds
+  honour!....................
+.Attackers victory!!!
+Reason: The Wall_58 has been climbed at [1073.07264362, 1269.06629121, 5.5]
+Spent time: 21 rounds
+  honour!....................
+..Attackers victory!!!
+Reason: The Wall_58 has been climbed at [1068.44961931, 1267.21315099, 5.5]
+Spent time: 22 rounds
+  fortheglory!....................
+.....Attackers victory!!!
+Reason: The Wall_72 has been climbed at [1239.59847199, 1311.49305644, 12.0]
+Spent time: 25 rounds
+  fight!....................
+.....Attackers victory!!!
+Reason: The Wall_58 has been climbed at [1184.55209864, 1313.75285332, 12.0]
+Spent time: 25 rounds
+  attack!....................
+.Attackers victory!!!
+Reason: The Wall_58 has been climbed at [1074.40968757, 1269.60224555, 5.0]
+Spent time: 21 rounds
+  fight!....................
+.....Attackers victory!!!
+Reason: The Wall_42 has been climbed at [268.592394041, 717.807678078, 5.0]
+Spent time: 25 rounds
+  die!....................
+.Attackers victory!!!
+Reason: The Wall_58 has been climbed at [1084.47071112, 1273.63520888, 5.0]
+Spent time: 21 rounds
+  formyking!....................
+..Attackers victory!!!
+Reason: The Wall_58 has been climbed at [1066.34259005, 1266.36854788, 6.0]
+Spent time: 22 rounds
+STATISTICS
+Number of games: 10
+Mean rounds per game: 23
+Attackers victories: 10(100.0%)
+Defenders victories: 0(0.0%)
+Construction defeats: 
+    Climbed:
+        Wall_42 climbed 2 times. Weakest point: [268.577273528, 718.034525191, 5.0]
+        Wall_58 climbed 6 times. Weakest point: [1078.73269315, 1271.33512322, 5.05555555556]
+        Wall_72 climbed 2 times. Weakest point: [1238.00438756, 1311.77813106, 12.0]
+    Fall:
+    Siege Tower attached:
+Weakest construction: Wall_58 at [1078.73269315, 1271.33512322, 5.05555555556],  defeated 6 times
+Defenders defeats (by killing): 0
+Attackers defeats (by killing): 0
+Current castle design should be improved
+Starting upgrading things ....
+Wall Evolution: Tower evolved to bastion
+Wall Evolution: Tower evolved to bastion
+Wall Evolution: Tower evolved to rounded
+Ending upgrading things ....
+A new tower has been inserted, or an old one has been upgraded
+  itsagooddaytodie....................
+...Attackers victory!!!
+Reason: The Wall_58 has been climbed at [1102.9764166, 1281.05322467, 7.5]
+Spent time: 23 rounds
+  theresistanceisfutile....................
+.Attackers victory!!!
+Reason: The Wall_58 has been climbed at [1095.00114463, 1277.85633528, 6.0]
+Spent time: 21 rounds
+  ayesir!....................
+..Attackers victory!!!
+Reason: The Wall_58 has been climbed at [1095.00114463, 1277.85633528, 6.0]
+Spent time: 22 rounds
+  booummm!....................
+...Attackers victory!!!
+Reason: The Wall_58 has been climbed at [1095.00114463, 1277.85633528, 6.0]
+Spent time: 23 rounds
+  formyking!....................
+....Attackers victory!!!
+Reason: The Wall_58 has been climbed at [1095.00114463, 1277.85633528, 7.5]
+Spent time: 24 rounds
+  booummm!...................Attackers victory!!!
+Reason: The Wall_58 has been climbed at [1094.00803314, 1275.30354833, 6.0]
+Spent time: 19 rounds
+  ayesir!....................
+...Attackers victory!!!
+Reason: The Wall_58 has been climbed at [1095.00114463, 1277.85633528, 6.0]
+Spent time: 23 rounds
+  defend!....................
+.........Attackers victory!!!
+Reason: The Wall_58 has been climbed at [1147.7320726, 1298.99353843, 12.0]
+Spent time: 29 rounds
+  attack!....................
+.Attackers victory!!!
+Reason: The Wall_58 has been climbed at [1095.00114463, 1277.85633528, 6.0]
+Spent time: 21 rounds
+  honour!....................
+......Attackers victory!!!
+Reason: The Wall_58 has been climbed at [1176.69879203, 1310.60485377, 12.0]
+Spent time: 26 rounds
+STATISTICS
+Number of games: 10
+Mean rounds per game: 23
+Attackers victories: 10(100.0%)
+Defenders victories: 0(0.0%)
+Construction defeats: 
+    Climbed:
+        Wall_58 climbed 10 times. Weakest point: [1095.00114463, 1277.85633528, 6.0]
+    Fall:
+    Siege Tower attached:
+Weakest construction: Wall_58 at [1095.00114463, 1277.85633528, 6.0],  defeated 10 times
+Defenders defeats (by killing): 0
+Attackers defeats (by killing): 0
+Current castle design should be improved
+Starting upgrading things ....
+Wall Evolution: Not enough space to place the tower)
+Ending upgrading things ....
+Cannot upgrade. Evolving the whole city
+City expansion cancelled (from battle) due a previous one
+Castle Expansion History:
+     Year: 1376  Due a battle: False
+     Year: 1386  Due a battle: False
+     Year: 1400  Due a battle: False
+Castle Expansion History:
+     Year: 1376  Due a battle: False
+     Year: 1386  Due a battle: False
+     Year: 1400  Due a battle: False
+Castle Expansion History:
+     Year: 1376  Due a battle: False
+     Year: 1386  Due a battle: False
+     Year: 1400  Due a battle: False
+Done
+
+Process finished with exit code 137

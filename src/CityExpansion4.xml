@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--  Game: City expansion XML template -->
+<!--  All parameters are mandatory except for those that are marked as optional -->
+
+
+<Game>
+    
+    <Type>CityExpansion</Type>				<!-- Available types: CityExpansion, Battle. Required -->
+    
+    <!-- Time Range, in centuries. The starting year will be the first year of first century. [8,19] by default  -->
+    <TimeRange>[9,18]</TimeRange>
+    
+    
+    <!-- Battlefield settings -->
+    <Battlefield>
+        <Bounding>2400.0</Bounding>							<!-- Battlefield size (square). Required -->
+        <CellSize>10.0</CellSize>							<!-- Cellsize (square). Required -->
+    </Battlefield>
+    
+    
+    <!-- Initial castle data -->
+    <Castle>
+    	<Orientation>[0.0, -1.0]</Orientation>	    		<!-- Castle front direction on the battlefield (used as reference to construct squared towers
+    															 Optional (taken from global settings) -->
+        
+        <!-- Set of initial houses. The curtain wall is constructed from them. Required -->
+        <OldCity>
+            <House>[100.0, 250.0]</House>					<!-- House 2D central point. See global settings to configure the house size -->
+            <House>[110.0, 300.0]</House>
+            <House>[120.0, 350.0]</House>
+            <House>[150.0, 300.0]</House>
+            <House>[160.0, 340.0]</House>
+            <House>[180.0, 270.0]</House>
+            <House>[150.0, 250.0]</House>
+            <House>[230.0, 330.0]</House>
+            <House>[200.0, 230.0]</House>
+            <House>[200.0, 292.0]</House>
+            <House>[330.0, 250.0]</House>
+            <House>[290.0, 250.0]</House>
+            <House>[255.0, 343.0]</House>
+            <House>[280.0, 304.0]</House>
+            <House>[238.0, 250.0]</House>
+            <House>[243.0, 280.0]</House>
+       </OldCity>
+        
+        
+    </Castle>
+    
+    
+    <!-- City evolution patterns (one or more) -->
+    <CityEvolutions>
+        
+		<Group>
+            <ID>1</ID>
+            <Evolutions>
+                <Evolution>
+                    <TimeRange>[850, 1800]</TimeRange>				<!-- Time range in years. Required -->
+                    <Direction>[-0.1, -0.8]</Direction>				<!-- Expansion direction (2D vector). Required -->
+                    <HousesPerYear>1</HousesPerYear>				<!-- Houses per year. More houses, more the city grows. 1 by default -->
+                </Evolution>
+ 	        </Evolutions>
+   		</Group>
+
+		<Group>
+            <ID>2</ID>
+            <Evolutions>
+                <Evolution>
+                    <TimeRange>[1001, 1800]</TimeRange>
+                    <Direction>[-0.7, -0.7]</Direction>
+                    <HousesPerYear>1</HousesPerYear>
+                </Evolution>
+
+                <Evolution>
+                    <TimeRange>[1001, 1800]</TimeRange>
+                    <Direction>[0.7, -0.7]</Direction>
+                    <HousesPerYear>1</HousesPerYear>
+                </Evolution>
+
+                <Evolution>
+                    <TimeRange>[1100, 1800]</TimeRange>
+                    <Direction>[0.0, 1.0]</Direction>
+                    <HousesPerYear>1</HousesPerYear>
+                </Evolution>
+ 	        </Evolutions>
+   		</Group>
+
+		<Group>
+            <ID>3</ID>
+            <Evolutions>
+                <Evolution>
+                    <TimeRange>[1300, 1800]</TimeRange>
+                    <Direction>[-0.7, -0.7]</Direction>
+                    <HousesPerYear>2</HousesPerYear>
+                </Evolution>
+
+                <Evolution>
+                    <TimeRange>[1201, 1300]</TimeRange>
+                    <Direction>[0.7, 0.7]</Direction>
+                    <HousesPerYear>1</HousesPerYear>
+                </Evolution>
+ 	        </Evolutions>
+   		</Group>
+
+	</CityEvolutions>
+    
+    
+    
+    
+    <!-- City expansion (new curtain wall) years (one or more). Optional -->
+    <CityExpansion>
+        
+        <WallDimensions>[80.0, 150.0]</WallDimensions>		<!-- Minimum and maximum wall dimensions for each expansion. Optional -->
+        
+        <!-- Expansion years. Optional -->
+        <Expansion>
+            <Year>1000</Year>
+            <GroupID>1</GroupID>
+        </Expansion>
+        <Expansion>
+            <Year>1200</Year>
+            <GroupID>2</GroupID>
+        </Expansion>
+        <Expansion>
+            <Year>1600</Year>
+            <GroupID>3</GroupID>
+        </Expansion>
+
+
+    </CityExpansion>
+    
+        
+    <!-- StarFortress construction. Optional -->
+    <!-- All parameters are optional. The default values are stored into global settings xml -->
+    <StarFortress>
+ 
+        <Activate>True</Activate>						<!-- The star fortress wont be created if StarFortress tag isnt specified or if this tag is False. If you want to activate
+        													 the star fortress but using all standard parameters, just set to True this tag -->
+        
+    	<BastionRadius>40.0</BastionRadius>				<!-- Bastion size (radius of circle used to construct it). Used only if initially towers are converted to bastions -->
+        
+        <Ravelin>
+            <Radius>25.0</Radius>						<!-- Radius of circle used to construct the ravelin (like in bastions) -->
+            <MinWidth>15.0</MinWidth>					<!-- Minimum ravelin width. This avoids too thin ravelins -->
+        </Ravelin>
+        
+        <HalfMoon>
+			<Activate>True</Activate>
+            <CircleOffset>5.0</CircleOffset>			<!-- Distance between halfmoon center and halfmoon circle radius -->
+            <Length>45.0</Length>						<!-- Distance from the halfmoon circle center to the halfmoon jag -->
+        </HalfMoon>
+        
+        <CovertWay>
+            <Thickness>10.0</Thickness>							<!-- Thickness of the covertway -->
+            <Offset>15.0</Offset>								<!-- Distance from the halfmoons and ravelins -->
+            <HasPlacesOfArms>True</HasPlacesOfArms>
+            <PlacesOfArmsLength>20.0</PlacesOfArmsLength>		<!-- Length of places of arms side -->
+        </CovertWay>
+        
+        <GlacisThickness>30.0</GlacisThickness>			<!-- Glacis width -->
+        
+    </StarFortress>
+    
+ 
+    
+    
+    
+</Game>

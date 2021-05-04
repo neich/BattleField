@@ -1,0 +1,53 @@
+<Castle>
+<Orientation>[0.0, -1.0]</Orientation>
+<Shape>
+<Vertex>
+<Point>[479.78, 726.77]</Point>
+<TowerType>SquaredTower</TowerType>
+</Vertex>
+<Vertex>
+<Point>[525.68, 624.04]</Point>
+<TowerType>SquaredTower</TowerType>
+</Vertex>
+<Vertex>
+<Point>[593.44, 547.54]</Point>
+</Vertex>
+<Vertex>
+<Point>[597.81, 501.63]</Point>
+</Vertex>
+<Vertex>
+<Point>[626.22, 457.92]</Point>
+<TowerType>RoundedTower</TowerType>
+</Vertex>
+<Vertex>
+<Point>[618.57, 513.66]</Point>
+</Vertex>
+<Vertex>
+<Point>[656.83, 597.81]</Point>
+</Vertex>
+<Vertex>
+<Point>[674.31, 661.2]</Point>
+</Vertex>
+<Vertex>
+<Point>[703.82, 708.19]</Point>
+</Vertex>
+<Vertex>
+<Point>[772.67, 745.35]</Point>
+<TowerType>SquaredTower</TowerType>
+</Vertex>
+<Vertex>
+<Point>[757.37, 800.0]</Point>
+<TowerType>SquaredTower</TowerType>
+</Vertex>
+<Vertex>
+<Point>[641.53, 834.972]</Point>
+<TowerType>SquaredTower</TowerType>
+</Vertex>
+<Vertex>
+<Point>[512.56, 843.71]</Point>
+</Vertex>
+<Vertex>
+<Point>[512.56, 742.07]</Point>
+</Vertex>
+</Shape>
+</Castle>

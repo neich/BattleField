@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--  Game: City expansion XML template -->
+<!--  All parameters are mandatory except for those that are marked as optional -->
+
+
+<Game>
+    
+    <Type>Battle</Type>				<!-- Available types: CityExpansion, Battle. Required -->
+    <Period>19</Period>				<!-- Time period (century). Used to decide construction types, such are towers -->
+    
+    <!-- Battlefield settings -->
+    <Battlefield>
+        <Bounding>500.0</Bounding>							<!-- Battlefield size (square). Required -->
+        <CellSize>10.0</CellSize>							<!-- Cellsize (square). Required -->
+    </Battlefield>
+    
+    
+    <!-- Initial castle data -->
+    <Castle>
+    	<Orientation>[0.0, -1.0]</Orientation>	    		<!-- Castle front direction on the battlefield (used as reference to construct squared towers
+    															 Optional (taken from global settings) -->
+        
+        <!-- Set of initial houses. The curtain wall is constructed from them. Required -->
+        <OldCity>
+            <House>[150.0, 230.0]</House>					<!-- House 2D central point. See global settings to configure the house size -->
+            <House>[230.0, 231.0]</House>
+            <House>[200.0, 312.0]</House>
+            <House>[230.0, 233.0]</House>
+            <House>[230.0, 234.0]</House>
+            <House>[243.0, 234.0]</House>
+            <House>[330.0, 250.0]</House>
+            <House>[245.0, 333.0]</House>
+			<House>[300.0, 304.0]</House>
+            <House>[238.0, 230.0]</House>
+            <House>[243.0, 260.0]</House>
+        </OldCity>
+        
+    </Castle>
+
+    
+    <!-- Define how attackers populate the battlefield. This is a different way than city evolution battle events, so here the troops are placed manually -->
+    <!-- An infantry unit has to be defined as minimum, so the game ends when a soldier climbs the wall -->
+    <AttackersPopulate>
+
+        <ArmySize>
+            <Battalion>["Infantry", 3500]</Battalion>
+            <Battalion>["Cannons", 20]</Battalion>
+        </ArmySize>
+         
+        <Battalion>
+            <Type>"Infantry"</Type>							
+            <DeploymentByRange>									
+	           <First>[4, 3]</First>
+	           <Last>[6, 46]</Last>
+            </DeploymentByRange>
+        </Battalion>
+        
+        <Battalion>
+            <Type>"Cannons"</Type>							
+            <DeploymentByRange>									
+	           <First>[1, 30]</First>
+	           <Last>[3, 35]</Last>
+            </DeploymentByRange>
+        </Battalion>
+        
+
+        
+    </AttackersPopulate>
+    
+    
+    
+    <!--  Define how  defenders populate the castle. This is a different way than city evolution battle events method, so here the troops are placed automatically -->
+    <DefendersPopulate>
+        
+        <Archers>255</Archers>
+        <Cannons>10</Cannons>
+        
+    </DefendersPopulate>
+    
+    
+    <HasHeightViews>True</HasHeightViews>					<!-- True if wall height views must to be shown -->
+    														<!-- WARNING: dont close any height view while the simulation is running -->
+   
+    
+ 
+    
+    
+    
+</Game>

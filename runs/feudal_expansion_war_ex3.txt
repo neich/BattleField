@@ -1,0 +1,6 @@
+START Event: BattleEvent
+    START Event: Simulation batch
+    END Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 286.1703393 secs
+    START Event: Simulation batch
+    END Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 285.9570438 secs
+END Event: BattleEvent, Message: Battle event finished (year 1700), TIME: 573.2543201 secs

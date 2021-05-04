@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--  SETTINGS FILE FOR BATTLES MODULE -->
+
+<!-- Notes:
+		- All distance values are in meters (or whatever user wants)
+		- The game is structured into steps (rounds), but you can consider them as minutes
+		- The game works in a battlefield 2D plan view. So, length means the X-axis magnitude, width means the Y-axis magnitude and height means the Z-axis magnitude (where it is available)
+ 		- ALL settings must be specified. You can decide to create a new one settings file. You can forget some values due are not applicable or used, but you have to write them using standard values
+ 		- Some of % values are from 0 to 100 or from 0 to 1. There are not a strong reason (developer mood status in each case). Sorry about that
+ 		- Sorry again, this time for mai English
+ -->
+
+<Battles>
+    <Castle>
+        
+        <!--  Castle orientation vector (castle front direction). Used to get the squared towers rotation -->
+        <Orientation>[0.0, -1.0]</Orientation>
+        
+        <!--  Castle defensive lines settings -->
+        <DefendingLine>
+        	<Width>4.0</Width>                  <!-- Not used anymore -->
+        	<CellSize>2.0</CellSize>     		<!-- Available space to allocate troops (value means the length side of a square cell) -->
+        	<Height>0.0</Height>				<!-- Height from wall height -->
+        </DefendingLine>
+        
+        <!--  Offset applied around the old city to construct the initial curtain wall -->
+        <CurtainWallOldCityMargin>30.0</CurtainWallOldCityMargin>
+        
+        <!-- True if construction labels must to be shown -->
+        <ShowLabels>False</ShowLabels>
+        
+        
+        <!-- Wall settings -->
+        <Wall>
+            
+            <InnerHeight>10.0</InnerHeight>			<!-- Wall height -->
+            <!--<Thickness>5.0</Thickness>-->
+            <Thickness>5.0</Thickness>
+            <MerlonHeight>2.0</MerlonHeight>		<!-- Barely used, not relevant (at least, it shouldnt be negative or too high -->
+            <WalkwayWidth>4.0</WalkwayWidth>		<!-- Barely used -->
+            <DefenseIncrease>700</DefenseIncrease>	<!-- Increase defenders defense factor due the wall protection -->
+            <BattalionGridCellSize>2.0</BattalionGridCellSize>		<!-- Default size for the deployment battalion on the wall -->
+            
+            <!-- Defense angles -->
+       		<DefenseAngle>
+       		    <H>90.0</H>						<!-- 2D plain view angle (degrees) around the main attack vector (wall normal vector) -->
+       		    <V>[45.0, 90.0]</V>				<!-- Vertical angles (in height), from bottom to main attack vector, and from this vector to top -->
+       		</DefenseAngle>
+            
+            <!-- Tiles -->
+            <Tile>
+	            <Width>3.5</Width>
+	            <Height>2.5</Height>
+	            <Resistance>100000</Resistance>	
+	            <RubbleConversionFactor>[0.25, 0.5, 0.25]</RubbleConversionFactor>
+            </Tile>
+            
+        </Wall>
+        
+        
+        <!-- Tower settings -->
+        <Tower>
+            <!-- Tower type selection century range. The ranges should overlap, so the selection is done in fuzzy way -->
+            <TimeRange>
+                <Squared>[-5, 14]</Squared>
+                <Rounded>[12, 17]</Rounded>
+                <Bastion>[16, 19]</Bastion>
+            </TimeRange>
+            
+            
+            <InnerHeight>18.0</InnerHeight>			<!-- Tower height -->
+            <!--<Thickness>4.0</Thickness>-->				<!-- Tower wall thickness -->
+            <Thickness>6.0</Thickness>				<!-- Tower wall thickness -->
+            <!--<SquareSide>12.0</SquareSide>-->			<!-- Squared tower side length -->
+            <SquareSide>25.0</SquareSide>			<!-- Squared tower side length -->
+            <!--<CircleRadius>10.0</CircleRadius>-->			<!-- Rounded tower radius -->
+            <CircleRadius>20.0</CircleRadius>			<!-- Rounded tower radius -->
+            <DefenseIncrease>800</DefenseIncrease>		<!-- Like wall defense increase. This value is shared to all kind of towers, also the bastions -->
+            <BattalionGridCellSize>
+                <Large>7.0</Large>									<!-- It should has enough space to deploy cannons -->
+                <Small>2.0</Small>									<!-- It should has enough space to deploy archers -->
+            </BattalionGridCellSize>
+        
+            <!-- Defense angles -->
+       		<DefenseAngle>
+       		    <H>90.0</H>						<!-- 2D plain view angle (degrees) around the main attack vector (radial vector for rounded towers or side normal for squared ones) -->
+       		    <V>[45.0, 90.0]</V>				<!-- Vertical angles (in height), from bottom to main attack vector, and from this vector to top -->
+       		</DefenseAngle>
+
+
+            <RequiredDistanceNeighborFactor>3.0</RequiredDistanceNeighborFactor>
+                        <!-- Value multiplied by the minimum distance available to place a neighbor tower -->
+                        <!-- Its recommended to use values greater than 2 -->
+       	</Tower>
+        
+        
+        
+        <!-- Moat settings -->
+        <Moat>
+            
+            <Depth>5.0</Depth>
+            <Width>15.0</Width>			<!-- Moat width (in 2D plan view) -->
+            <HasWater>True</HasWater>
+            <PenaltyWater>0.01</PenaltyWater>		<!-- Penalty movement if cell is in a moat with water (Its a %1 to multiply to battalion movement penalties) -->
+            <PenaltyNoWater>0.1</PenaltyNoWater>	<!-- Penalty movement from terrain conditions on moat inside (%1) -->
+            
+        </Moat>
+        
+        
+        <!-- Bastion settings -->
+        <Bastion>
+            
+            <!--<VirtualCircleRadius>40.0</VirtualCircleRadius>-->  <!-- Bastions are created around a virtual rounded tower. This is the radius of this virtual tower -->
+            <VirtualCircleRadius>50.0</VirtualCircleRadius>  <!-- Bastions are created around a virtual rounded tower. This is the radius of this virtual tower -->
+            <Thickness>10.0</Thickness>
+            				<!-- WARNING: The relation between the circle radius and thickness is important. The radius cannot be NEVER less than thickness
+                                          If both are close, the bastion will be almost closed
+                                          Because we are humans, and humans usually place the warning messages in a distant hole in their minds, the system clamps
+                                          the radius to the thickness if radius is less 
+                            -->
+            <Height>7.0</Height>									<!-- It should be the same than wall height -->
+            <BattalionGridCellSize>
+                <Large>10.0</Large>									<!-- It should has enough space to deploy cannons -->
+                <Small>2.0</Small>									<!-- It should has enough space to deploy archers -->
+            </BattalionGridCellSize>
+            <MinDistance>10.0</MinDistance>							<!-- Minimum distance between bastions. Used when the towers are transformed into bastions to construct the starfortress -->
+            
+        </Bastion>
+        
+        
+        <!-- Star Fortress -->
+        <StarFortress>
+        	    
+			<Ravelin>
+			    <Method>2</Method>
+			    		<!-- Ravelin construction method:
+			    						1 = Ravelin flanks constructed at <BastionAngle> from bastion flanks.
+                             			2 = Ravelin frontal length constructed wifh <Radius> distance 
+                                        WARNING: Currently the method 1 is deprecated and should be checked before use it. Only for symmetric fortresses
+						-->			    
+			    
+			    <BastionAngle>120.0</BastionAngle>					<!-- Angle between bastion flanks and ravelin flanks. It shouldnt be less than 90 degrees -->
+			    <Radius>50.0</Radius>								<!-- It should be the same than bastion virtual radius -->
+			    <MinimumWidth>15.0</MinimumWidth>					<!-- Minimum ravelin width -->
+			</Ravelin>            
+            
+			<HalfMoon>
+			    <Active>True</Active>								
+			    <CircleOffset>5.0</CircleOffset>					<!-- Center displacement of the halfmoon circle -->
+			    <Length>30.0</Length>								<!-- Halfmoon length from the circle center to the frontal jag -->
+			</HalfMoon>
+            
+			<CovertWay>
+			    <Thickness>10.0</Thickness>
+			    <Offset>5.0</Offset>								<!-- Distance from the covert way to the inner fortress -->
+			    <PlaceOfArms>True</PlaceOfArms>
+			    <PlaceOfArmsLength>10.0</PlaceOfArmsLength>			<!-- Place of arms size (side length) -->
+			    <MinimumSegmentLength>20.0</MinimumSegmentLength>	<!-- Minimum segment length of covert way polyline (used to avoid wrong polylines with too small segments) -->
+			    <GlacisThickness>10.0</GlacisThickness>				<!-- Thickness of external glacis (external fortress declivity). Note that this is a 2D shape, and the height slope is not considered here -->
+			</CovertWay>
+			
+        </StarFortress>
+        
+        
+    </Castle>
+    
+     
+    
+    <!-- Battlefield settings -->
+    <Battlefield>
+        
+        <size>100.0</size>								<!-- battlefield square side length (in meters) -->        
+        
+        <!-- Battlefield cell settings -->
+        <GroundCell>
+            
+            <Size>10.0</Size>							<!-- battlefield cell square side length -->
+            <Height>0.0</Height>						<!-- default height from ground -->
+            <DefenseIncrease>0.0</DefenseIncrease>		<!-- default defense value for troops deployed on a cell -->
+            <MovementPenalty>1.0</MovementPenalty>		<!-- default penalty movement for each cell in battlefield grid. It is a % to be applied on unit speed (max: 1) -->
+            
+        </GroundCell>
+        
+        <Trench>
+            
+            <DefenseIncrease>50000.0</DefenseIncrease>							<!-- Value to add to current cell defense  -->
+            <MovementPenalty>0.5</MovementPenalty>								<!-- Set the movement penalty in %1 (closest to 1, less penalty) -->
+            <ShowOutline>False</ShowOutline>
+ 
+            <!-- Random trench deployment control -->
+            <RandomDeployment>0.01</RandomDeployment>							<!-- 0 to 1 parameter to deploy random trenches. 1 means 100% trenches allong all battlefield -->
+            <RandomDeploymentConsecutive>0.7</RandomDeploymentConsecutive>		<!-- 0 to 1 parameter to deploy in a consecutive way trenches. When a random trench is deployed, this value decides if a new consecutive trench is choosen -->
+            <RandomDeploymentMaxTries>50</RandomDeploymentMaxTries>				<!-- Maximum number of tries to get a consecutive trench. Used basically to avoid infinite loops if <RandomDeploymentConsecutive> is near to 1 -->
+            
+        </Trench>
+
+
+        <River>
+            <PenaltyMovement>0.01</PenaltyMovement>          <!-- Like moat penalty movement to battalions -->
+        </River>
+        
+    </Battlefield>
+    
+    
+    
+    <!-- Armies settings -->
+    <Army>
+        
+        <Infantry>
+            
+            <Defense>40</Defense>							<!-- Defense value (compared with attack value) -->
+            <Attack>0</Attack>								<!-- Attack value (compared with defense value) (not used)-->
+            <Speed>10</Speed>								<!-- Movement speed (meters/minute or meters/step) 
+				                                                 Currently a unit only can move as fast as cellsize/step
+				                                                 TODO: Allow faster movements -->
+            <Reload>1</Reload>								<!-- Shoot reload time in minutes/steps (not used for infantry) (currently, 1 minute = 1 step)-->
+            <Accuracy>0</Accuracy>							<!-- Accuracy shoot factor ([0-100]%) (not used)  -->
+            <Distance>2.0</Distance>						<!-- Maximum attack distance (not used)-->
+            <Bounding>										<!-- Soldier bounding dimensions. Includes the "personal space". This bounding is used to get the number of units that -->
+                <Length>2.0</Length>						<!-- fit into a battalion, that is deployed into a battlefield cell -->							 
+                <Height>2.0</Height>
+                <Width>2.0</Width>
+            </Bounding>
+            <ClimbSpeed>1.0</ClimbSpeed>					<!-- Climbing speed (meters/step). Note that standard speed value doesnt be a float number due the battlefield size. 
+            													 But for climbing it could be a more precise value, due the movement is in height  -->
+            <Stationary>False</Stationary>					<!-- True if unit cannot move. For infantry it should be False ever -->
+            <MovementPriority>1</MovementPriority>			<!-- Prority value to decide what unit to move when two of them collide into the battlefield  [0-inf].
+            													 A battalion with higer value will swap current battalion position by its position -->
+            <MovementPriorityWaitingClimbing>50</MovementPriorityWaitingClimbing>		<!-- Priority when a battalion is climbing. It should be high, so nobody can move 
+            																			the battalion when it is climbing, even siege towers -->
+            <RubbleClimbSpeed>1.5</RubbleClimbSpeed>					<!-- Speed over rubble -->
+            <SearchRadiusGoToRumble>7.0</SearchRadiusGoToRumble>		<!-- Distance to force the battalion to go through a wall gateway and over the rubble. -->
+            
+        </Infantry>
+        
+        
+        <!-- The archers class is a representation that who throw "things" with a weapon, such are archers, shooters, ... -->
+        <Archers>
+            
+            <Defense>0</Defense>							
+            <Attack>20</Attack>								
+            <Speed>10</Speed>						
+            <Reload>2</Reload>
+            <Accuracy>75</Accuracy>
+            <Distance>200.0</Distance>                      <!-- 100 meters of distance is just for play the demo files. An archeru should shoot to 300 meters at least -->
+            <Bounding>
+                <Length>2.0</Length>
+                <Width>2.0</Width>
+                <Height>2.0</Height>
+            </Bounding>
+            <Stationary>True</Stationary>								<!--  Archers are stationary by nature. But they can move if a better shoot position is required -->
+            <MovementPriority>0</MovementPriority>						<!--  Everybody can move an archer from his place -->
+            
+            <DefenseShootDoubleCheck>False</DefenseShootDoubleCheck>	<!-- If is false only checks the aim when the target is selected. Is is true, check also the final 
+            																 aiming position. This flag is usefull to set the archers effectiveness. Due the restricted 
+            																 shoot angle of castle archers, sometimes a really close battalion cannot be shooted because
+																			 the cell center is "visible", but the final random cell position not. By the other hand, this 
+																			 check is computionally expensive, so it must to be performed by each archer for each round -->
+            <ShootsToStay>0.2</ShootsToStay>							<!-- Percentage of shoots in attack range performed by an archers battalion to decide to stay 
+            																 in its place or move. Less percentage means more static the archers will be -->
+            <SearchRadiusTrench>100.0</SearchRadiusTrench>				<!-- Search distance for looking for a trench where to hide -->
+            <DefendersMarginSpace>2.0</DefendersMarginSpace>           <!-- If archer is a defender, this margin is applied between each deployed archer, in any deployment mode -->
+
+        </Archers>
+        
+        
+        <!-- The Cannons class is a representation of artillery units -->
+        <Cannons>
+            
+            <Defense>120000</Defense>							
+            <Attack>30000</Attack>								
+            <Speed>0</Speed>											<!-- Cannons cannot move -->						
+            <Reload>5</Reload>									
+            <Accuracy>75</Accuracy>
+            <Distance>600.0</Distance>
+            <Bounding>
+                <Length>7.0</Length>
+                <Width>7.0</Width>
+                <Height>1.0</Height>
+            </Bounding>
+            <Stationary>True</Stationary>								
+            <MovementPriority>100</MovementPriority>					<!-- Only God can move a cannon -->					            
+            <DefenseShootDoubleCheck>False</DefenseShootDoubleCheck>	<!-- Like archers ... -->
+            
+            <ShootAngle>						
+                <H>60.0</H>						<!-- 2D plain view angle (degrees) around the main attack vector (specified when cannon finds his goal) -->
+                <V>[45.0, 90.0]</V>				<!-- Vertical angles (in height), from bottom to main attack vector, and from this vector to top -->
+            </ShootAngle>
+            									<!-- NOTE: The shoot angle is specified also for walls and towers, but not for archers. This is due the archers in the open 
+            									     battlefield dont have too much aim restrictions (except distance), and when they are defenders, deployed in walls or towers,
+            									     the restrictions are related to the constructions. For the cannons case, it is clear that the cannon cannot shoot to any
+            									     direction, either in the battlefield or in the castle -->
+
+            <BallRadius>3.0</BallRadius>		<!-- Virtual cannon ball sphere radius. Its used to collide the bullet against battalions. Because its too difficult to calculate the exact shoot
+                                                     effect against a battalion, the radius should be enough large to kill any soldier into the battalion. The value
+                                                	 shoud be the infantry/archer bounding, or a little bit greater, to assure the impact -->
+
+            <DefaultPlacementDistance>0.6</DefaultPlacementDistance>      
+            									<!-- % of shoot distance used as guide to place the cannons from walls [0,1]. A low value means best shoots (near from walls), but less defense -->                             	 
+                                                	 
+        </Cannons>
+        
+ 
+		
+        <SiegeTowers>
+            
+            <Defense>5000</Defense>							
+			<Attack>20</Attack>											<!-- It should be the same value than archers. The program will multiplie this value by the number of archers located inside the tower -->				
+			<Speed>7</Speed>																	
+			<Reload>1</Reload>											<!-- It should be the same value than archers, for the same reason -->						
+			<Accuracy>75</Accuracy>										<!-- It should be the same value than archers -->
+			<Distance>100.0</Distance>									<!-- It should be the same value than archers -->
+			<Bounding>													<!-- The tower dimension will define the number of archers that can wear inside -->
+			    <Length>5.0</Length>
+			    <Width>10.0</Width>
+			    <Height>0.0</Height>									<!-- Height is not considered, so its calculated when a wall is targeted -->
+			</Bounding>
+			<LevelHeight>2.0</LevelHeight>								<!-- Height for each tower level. This height should be enough to allow archers inside. The number of levels
+																			 is automatically calculated when a wall is targeted -->
+			
+			<ConstructionTimePerLevel>1</ConstructionTimePerLevel>		<!-- Time to construct one tower level -->
+																			 
+			<Stationary>False</Stationary>								
+			<MovementPriority>5</MovementPriority>						<!-- Everyone has to move when a siege tower comes, except the cannons, so the siege towers are not any kind of god -->					            
+            
+            <TurtleDefense>400</TurtleDefense>							<!-- Turtle defense value. This value will replace the original battalion defense value -->
+            <CoverMoatSpeed>0.02</CoverMoatSpeed> 						<!-- Moat covered meters by turn and by soldier in the turtle  -->
+             
+        </SiegeTowers>
+
+        
+        <!-- Special units created when attackers start to climb a wall. They are groups of archers, so it should share settings -->
+        <Throwers>
+        	<Defense>0</Defense> 
+            <Attack>200</Attack>							<!-- The damage is applied by distance. The applied damage is the attack divided by the distance per throwers Distance value -->
+			<Speed>0</Speed>
+			<Reload>15</Reload>								<!-- This value will be divided by the battalion size. So, more units on the battalion, less reload time -->
+			<Accuracy>95</Accuracy>
+			<Distance>0.5</Distance>						<!-- Distance attenuation (see Attack value). Greater value means more attenuation -->      
+			<Bounding>
+			    <Length>0</Length>							<!-- Let length and width at 0, so it is updated when battalion is created with available archers -->
+			    <Width>0</Width>
+			    <Height>2.0</Height>
+			</Bounding>      
+			<Stationary>True</Stationary>
+			<MovementPriority>0</MovementPriority>
+			<BattalionMaxSize>3</BattalionMaxSize>			<!-- Max number of archers per battalion -->
+			
+        </Throwers>
+        
+        
+   	    <ShowLabels>False</ShowLabels>				<!-- Shows each battalion label. Usefull for debuggin purposes -->
+   	    <ShowOutline>False</ShowOutline>			<!-- Shows the battalion bounding outline. Deactivate for large battlefields -->
+   	    <HumanFieldOfView>120.0</HumanFieldOfView>	<!-- Field of view for aiming an objective. Used by archers, cannons, ... -->
+    	
+    	
+    </Army>
+    
+    
+    
+    
+    <!-- City evolution settings -->
+    <City>        
+        
+        <Houses>
+            <Size>8.0</Size>								<!-- Squared house size in meters -->
+            <DistanceWall>50.0</DistanceWall>				<!-- Houses distance from the castle wall -->
+            <MinDistanceBetween>16.0</MinDistanceBetween>	<!-- Minimum distance between houses -->
+            <MaxDistanceBetween>35.0</MaxDistanceBetween>	<!-- Maximum distance between houses -->
+            						<!-- WARNING: Consider both values as approximated factors. The minimum distance cannot be controlled since the placement is random in distance and angle -->
+            
+            <PlacementFuzzy>1.5</PlacementFuzzy>			<!-- Factor value to place new houses. Minimum 1. Large values means wider and longer streets -->
+            <CreationPerYear>1</CreationPerYear>			<!-- Houses to create for each year -->
+            <PreferenceFactor>0.2</PreferenceFactor>		<!-- % factor used to give more priority at the first line of the houses to expand  -->
+        </Houses>
+        
+        <EvolutionSpeed>20</EvolutionSpeed>				<!-- Display speed (high values means slow playings) -->
+        <YearsPerStep>1</YearsPerStep>					<!-- Years that advance for each evolution step -->
+        
+        <MinWallLength>30.0</MinWallLength>			<!-- Minimum wall length for a new curtain wall -->
+        <MaxWallLength>6000.0</MaxWallLength>			<!-- Maximum wall length for a new curtain wall -->
+        <MatchVerticesDistance>5.0</MatchVerticesDistance>      <!-- Margin distance to match vertices between two castles in an union operation. Small values means close vertices
+                                                                    , so close towers. Great values means less close vertices, but some walls could disappear -->
+        
+        <WaitBattle>1</WaitBattle>					<!-- Waiting time for a city evolution step when a battle is running. It is the time waiting until check again if the battle has finished -->
+    
+    	<DisplayOldTownGrid>False</DisplayOldTownGrid>		<!-- Show the old city grid. This is usefull to check visually the first evolutions steps -->
+        
+    </City>
+    
+    
+    
+    <!-- General game settings -->
+    <Game>
+        
+        <speed>1</speed>									<!-- Control the spped. 1 is the minimum (faster) -->
+        
+            
+        <WindowHeight>1000</WindowHeight>				<!-- Try to avoid non-square windows or viewports. TKinter canvas isnt too much powerful in many things ... -->
+        <WindowWidth>1000</WindowWidth>
+        <ViewportHeight>1000</ViewportHeight>
+        <ViewportWidth>1000</ViewportWidth>
+        <HeightViewHeight>400</HeightViewHeight>		<!-- View dimensions for wall height 2D view -->
+        <HeightViewWidth>400</HeightViewWidth>
+        
+        <ShowGrid>False</ShowGrid>						<!-- 2D plan view grid (each grid cell is a battlefield cell) -->
+            
+        
+    </Game>    
+        
+
+
+    
+</Battles>
+
+
+

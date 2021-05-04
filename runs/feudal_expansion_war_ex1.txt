@@ -1,0 +1,35 @@
+START Event: BattleEvent
+    START Event: Simulation batch
+    END Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 71.047886 secs
+END Event: BattleEvent, Message: Battle event finished (year 1100), TIME: 71.8523278 secs
+START Event: BattleEvent
+    START Event: Simulation batch
+    END Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 76.3799266 secs
+    START Event: Simulation batch
+    END Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 57.2851291 secs
+END Event: BattleEvent, Message: Battle event finished (year 1374), TIME: 134.576282 secs
+START Event: BattleEvent
+    START Event: Simulation batch
+    END Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 18.9609137 secs
+    START Event: Simulation batch
+    END Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 18.7291817 secs
+END Event: BattleEvent, Message: Battle event finished (year 1384), TIME: 38.8686452 secs
+START Event: BattleEvent
+    START Event: Simulation batch
+    END Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 73.8939809 secs
+    START Event: Simulation batch
+    END Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 71.7080627 secs
+END Event: BattleEvent, Message: Battle event finished (year 1410), TIME: 146.611796 secs
+START Event: BattleEvent
+    START Event: Simulation batch
+    END Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 111.8749643 secs
+    START Event: Simulation batch
+    END Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 111.9782427 secs
+END Event: BattleEvent, Message: Battle event finished (year 1500), TIME: 224.9936837 secs
+
+Castle Expansion History:
+     Year: 1374  Due a battle: True
+     Year: 1384  Due a battle: True
+     Year: 1400  Due a battle: False
+     Year: 1410  Due a battle: True
+     Year: 1500  Due a battle: True

@@ -1,0 +1,548 @@
+/usr/bin/python2.7 /home/mussoltrek/pycharm-community-3.4.1/helpers/pydev/pydevd.py --multiproc --client 127.0.0.1 --port 32875 --file /home/mussoltrek/workspace/Battles/src/execute.py
+Connected to pydev debugger (build 135.1057)
+pydev debugger: process 16593 is connecting
+
+BATTLE EVENT (1100)
+Starting battle...
+  aaarghh!....................
+....................
+....................
+....................
+....................
+....................
+....................
+....................
+....................
+....................
+........Defenders victory!!!
+Reason: The army have been fallen. Eternal glory for the fallen heroes!
+Spent time: 208 rounds
+  fortheglory!....................
+....................
+....................
+............Attackers victory!!!
+Reason: The Wall_10 has been climbed at [660.137311268, 831.443624064, 8.0]
+Spent time: 72 rounds
+   #*&fu*k?#@!....................
+....................
+....................
+..........Attackers victory!!!
+Reason: The Wall_10 has been climbed at [667.585873839, 829.194909197, 8.0]
+Spent time: 70 rounds
+  booummm!....................
+....................
+....................
+....................
+....................
+....................
+....Defenders victory!!!
+Reason: The army have been fallen. Eternal glory for the fallen heroes!
+Spent time: 124 rounds
+  aaarghh!....................
+....................
+....................
+..............Attackers victory!!!
+Reason: The Wall_10 has been climbed at [664.079039825, 830.253619479, 8.0]
+Spent time: 74 rounds
+  booummm!....................
+....................
+....................
+....................
+....................
+............Defenders victory!!!
+Reason: The army have been fallen. Eternal glory for the fallen heroes!
+Spent time: 112 rounds
+  booummm!....................
+....................
+....................
+....................
+.............Defenders victory!!!
+Reason: The army have been fallen. Eternal glory for the fallen heroes!
+Spent time: 93 rounds
+  surrender!....................
+....................
+....................
+....................
+....................
+...Defenders victory!!!
+Reason: The army have been fallen. Eternal glory for the fallen heroes!
+Spent time: 103 rounds
+  ouch!....................
+....................
+....................
+...............Attackers victory!!!
+Reason: The Wall_10 has been climbed at [663.153359282, 830.533081668, 8.0]
+Spent time: 75 rounds
+  fortheglory!....................
+....................
+....................
+....................
+..Attackers victory!!!
+Reason: The Wall_11 has been climbed at [534.707970295, 844.214011602, 8.0]
+Spent time: 82 rounds
+STATISTICS
+Number of games: 10
+Mean rounds per game: 101
+Attackers victories: 5(50.0%)
+Defenders victories: 5(50.0%)
+Construction defeats: 
+    Climbed:
+        Wall_11 climbed 1 times. Weakest point: [534.707970295, 844.214011602, 8.0]
+        Wall_10 climbed 4 times. Weakest point: [663.384779418, 830.463216121, 8.0]
+    Fall:
+    Siege Tower attached:
+Weakest construction: Wall_10 at [663.384779418, 830.463216121, 8.0],  defeated 4 times
+Defenders defeats (by killing): 0
+Attackers defeats (by killing): 5
+Current castle design is good enough in mean. None evolution is needed
+BATTLE EVENT (1200)
+Starting battle...
+  fortheglory!....................
+....................
+....................
+....................
+....................
+....................
+....Defenders victory!!!
+Reason: The army have been fallen. Eternal glory for the fallen heroes!
+Spent time: 124 rounds
+  surrender!....................
+....................
+....................
+.........Attackers victory!!!
+Reason: The Wall_10 has been climbed at [663.913676424, 830.303542553, 8.0]
+Spent time: 69 rounds
+  attack!....................
+....................
+....................
+....................
+....................
+....................
+...Defenders victory!!!
+Reason: The army have been fallen. Eternal glory for the fallen heroes!
+Spent time: 123 rounds
+  fight!....................
+....................
+....................
+....................
+....................
+...................Defenders victory!!!
+Reason: The army have been fallen. Eternal glory for the fallen heroes!
+Spent time: 119 rounds
+   #*&fu*k?#@!....................
+....................
+....................
+....................
+.......Attackers victory!!!
+Reason: The Wall_9 has been climbed at [769.042753912, 765.724617114, 8.0]
+Spent time: 87 rounds
+  booummm!....................
+....................
+....................
+....................
+....................
+....................
+...Defenders victory!!!
+Reason: The army have been fallen. Eternal glory for the fallen heroes!
+Spent time: 123 rounds
+  ayesir!....................
+....................
+....................
+....................
+.........Attackers victory!!!
+Reason: The Wall_9 has been climbed at [769.892611556, 762.689014483, 8.0]
+Spent time: 89 rounds
+  fight!....................
+....................
+....................
+....................
+.................Attackers victory!!!
+Reason: The Wall_9 has been climbed at [768.377887745, 768.099449534, 8.0]
+Spent time: 97 rounds
+  honour!....................
+....................
+....................
+....................
+.............Attackers victory!!!
+Reason: The Wall_8 has been climbed at [758.755487786, 735.567293856, 8.0]
+Spent time: 93 rounds
+  honour!....................
+....................
+....................
+....................
+....................
+............Defenders victory!!!
+Reason: The army have been fallen. Eternal glory for the fallen heroes!
+Spent time: 112 rounds
+STATISTICS
+Number of games: 10
+Mean rounds per game: 103
+Attackers victories: 5(50.0%)
+Defenders victories: 5(50.0%)
+Construction defeats: 
+    Climbed:
+        Wall_8 climbed 1 times. Weakest point: [758.755487786, 735.567293856, 8.0]
+        Wall_9 climbed 3 times. Weakest point: [769.042753912, 765.724617114, 8.0]
+        Wall_10 climbed 1 times. Weakest point: [663.913676424, 830.303542553, 8.0]
+    Fall:
+    Siege Tower attached:
+Weakest construction: Wall_9 at [769.042753912, 765.724617114, 8.0],  defeated 3 times
+Defenders defeats (by killing): 0
+Attackers defeats (by killing): 5
+Current castle design is good enough in mean. None evolution is needed
+CASTLE EXPANSION EVENT (1376)
+Extending castle
+CASTLE EXPANSION EVENT (1386)
+Extending castle
+BATTLE EVENT (1398)
+Starting battle...
+  die!....................
+.......Attackers victory!!!
+Reason: The Wall_44 has been climbed at [199.757769193, 771.797954154, 8.0]
+Spent time: 27 rounds
+   #*&fu*k?#@!....................
+.....Attackers victory!!!
+Reason: The Wall_44 has been climbed at [198.699502354, 774.171799909, 8.0]
+Spent time: 25 rounds
+  surrender!....................
+......Attackers victory!!!
+Reason: The Wall_44 has been climbed at [200.453480893, 770.237372074, 8.0]
+Spent time: 26 rounds
+  ouch!....................
+..........Attackers victory!!!
+Reason: The Wall_44 has been climbed at [201.953138777, 766.873422293, 8.0]
+Spent time: 30 rounds
+  ayesir!....................
+...Attackers victory!!!
+Reason: The Wall_44 has been climbed at [206.706449529, 756.211058007, 8.0]
+Spent time: 23 rounds
+  aaarghh!....................
+........Attackers victory!!!
+Reason: The Wall_44 has been climbed at [198.333068746, 774.993763552, 8.0]
+Spent time: 28 rounds
+  formyking!....................
+.....Attackers victory!!!
+Reason: The Wall_44 has been climbed at [199.476337074, 772.429247149, 8.0]
+Spent time: 25 rounds
+  die!....................
+......Attackers victory!!!
+Reason: The Wall_44 has been climbed at [199.789143615, 771.727576783, 8.0]
+Spent time: 26 rounds
+  surrender!....................
+.....Attackers victory!!!
+Reason: The Wall_44 has been climbed at [208.524647857, 752.132575885, 8.0]
+Spent time: 25 rounds
+  formyking!....................
+........Attackers victory!!!
+Reason: The Wall_44 has been climbed at [197.615007584, 776.604478711, 8.0]
+Spent time: 28 rounds
+STATISTICS
+Number of games: 10
+Mean rounds per game: 26
+Attackers victories: 10(100.0%)
+Defenders victories: 0(0.0%)
+Construction defeats: 
+    Climbed:
+        Wall_44 climbed 10 times. Weakest point: [200.360469622, 770.446009822, 8.0]
+    Fall:
+    Siege Tower attached:
+Weakest construction: Wall_44 at [200.360469622, 770.446009822, 8.0],  defeated 10 times
+Defenders defeats (by killing): 0
+Attackers defeats (by killing): 0
+Current castle design should be improved
+Wall Evolution: New tower added)
+A new tower has been inserted, or an old one has been upgraded
+  surrender!....................
+.....Attackers victory!!!
+Reason: The Wall_59 has been climbed at [199.55284428, 772.257630407, 8.0]
+Spent time: 25 rounds
+  die!....................
+...Attackers victory!!!
+Reason: The Wall_59 has been climbed at [199.688749248, 771.952775884, 8.0]
+Spent time: 23 rounds
+  ayesir!....................
+....................
+..................Attackers victory!!!
+Reason: The Wall_34 has been climbed at [1117.42932097, 951.000942608, 8.0]
+Spent time: 58 rounds
+  honour!....................
+......Attackers victory!!!
+Reason: The Wall_59 has been climbed at [199.470555531, 772.442215987, 8.0]
+Spent time: 26 rounds
+  defend!....................
+................Attackers victory!!!
+Reason: The Wall_59 has been climbed at [198.972872389, 773.558591338, 8.0]
+Spent time: 36 rounds
+  aaarghh!....................
+........Attackers victory!!!
+Reason: The Wall_59 has been climbed at [201.022294075, 768.961441744, 8.0]
+Spent time: 28 rounds
+  attack!....................
+....Attackers victory!!!
+Reason: The Wall_59 has been climbed at [197.347746475, 777.203984077, 8.0]
+Spent time: 24 rounds
+  aaarghh!....................
+......Attackers victory!!!
+Reason: The Wall_59 has been climbed at [199.878940058, 771.52615036, 8.0]
+Spent time: 26 rounds
+  itsagooddaytodie....................
+....................
+.................Attackers victory!!!
+Reason: The Wall_34 has been climbed at [1139.37722699, 956.835731026, 8.0]
+Spent time: 57 rounds
+  surrender!....................
+....................
+.................Attackers victory!!!
+Reason: The Wall_34 has been climbed at [1131.21168128, 954.664943914, 8.0]
+Spent time: 57 rounds
+STATISTICS
+Number of games: 10
+Mean rounds per game: 36
+Attackers victories: 10(100.0%)
+Defenders victories: 0(0.0%)
+Construction defeats: 
+    Climbed:
+        Wall_59 climbed 7 times. Weakest point: [200.694129581, 769.697562222, 8.0]
+        Wall_34 climbed 3 times. Weakest point: [1117.42932097, 951.000942608, 8.0]
+    Fall:
+    Siege Tower attached:
+Weakest construction: Wall_59 at [199.468218909, 772.447457368, 8.0],  defeated 7 times
+Defenders defeats (by killing): 0
+Attackers defeats (by killing): 0
+Current castle design should be improved
+Wall Evolution: Not enough space to place the tower)
+Wall Evolution: Not enough space to place the tower)
+Cannot place any new tower. Evolving the whole city
+WARNING: Castle::ExpandCastle -> None groupID has been specified
+Extending castle
+ERROR: The new castle is fully covered by the old one. Choosing the old castle shape as the new one
+Scheduled expansion cancelled due a previous one. Year 1400
+Castle Expansion History:
+     Year: 1376  Due a battle: False
+     Year: 1386  Due a battle: False
+     Year: 1398  Due a battle: True
+BATTLE EVENT (1500)
+Starting battle...
+  die!....................
+...Attackers victory!!!
+Reason: The Wall_59 has been climbed at [198.621920442, 774.345827372, 8.0]
+Spent time: 23 rounds
+  itsagooddaytodie....................
+.......Attackers victory!!!
+Reason: The Wall_59 has been climbed at [205.853393757, 758.124585624, 8.0]
+Spent time: 27 rounds
+  honour!....................
+....Attackers victory!!!
+Reason: The Wall_59 has been climbed at [199.182664381, 773.087997521, 8.0]
+Spent time: 24 rounds
+  fortheglory!....................
+....Attackers victory!!!
+Reason: The Wall_43 has been climbed at [207.965104774, 796.026554534, 8.0]
+Spent time: 24 rounds
+  surrender!....................
+...Attackers victory!!!
+Reason: The Wall_59 has been climbed at [201.610602272, 767.641781272, 8.0]
+Spent time: 23 rounds
+  itsagooddaytodie....................
+....Attackers victory!!!
+Reason: The Wall_59 has been climbed at [197.771061606, 776.254426944, 8.0]
+Spent time: 24 rounds
+  surrender!....................
+....Attackers victory!!!
+Reason: The Wall_43 has been climbed at [210.748654928, 797.968559138, 8.0]
+Spent time: 24 rounds
+  honour!....................
+........Attackers victory!!!
+Reason: The Wall_59 has been climbed at [200.815248838, 769.425874189, 8.0]
+Spent time: 28 rounds
+  fight!....................
+................Attackers victory!!!
+Reason: The Wall_43 has been climbed at [216.907491003, 802.265405739, 8.0]
+Spent time: 36 rounds
+  ayesir!....................
+....Attackers victory!!!
+Reason: The Wall_60 has been climbed at [218.892229106, 728.876589939, 8.0]
+Spent time: 24 rounds
+STATISTICS
+Number of games: 10
+Mean rounds per game: 25
+Attackers victories: 10(100.0%)
+Defenders victories: 0(0.0%)
+Construction defeats: 
+    Climbed:
+        Wall_59 climbed 6 times. Weakest point: [200.98734098, 769.039846596, 8.0]
+        Wall_43 climbed 3 times. Weakest point: [207.965104774, 796.026554534, 8.0]
+        Wall_60 climbed 1 times. Weakest point: [218.892229106, 728.876589939, 8.0]
+    Fall:
+    Siege Tower attached:
+Weakest construction: Wall_59 at [200.98734098, 769.039846596, 8.0],  defeated 6 times
+Defenders defeats (by killing): 0
+Attackers defeats (by killing): 0
+Current castle design should be improved
+Wall Evolution: Tower evolved to bastion
+Wall Evolution: Not enough space to evolve the tower
+Wall Evolution: Not enough space to place the tower)
+Wall Evolution: Tower evolved to bastion
+Wall Evolution: Not enough space to evolve the tower
+Wall Evolution: Not enough space to place the tower)
+Wall Evolution: Tower evolved to bastion
+Wall Evolution: Not enough space to evolve the tower
+Wall Evolution: Not enough space to place the tower)
+Cannot place any new tower. Evolving the whole city
+WARNING: Castle::ExpandCastle -> None groupID has been specified
+Extending castle
+Castle Expansion History:
+     Year: 1376  Due a battle: False
+     Year: 1386  Due a battle: False
+     Year: 1398  Due a battle: True
+     Year: 1500  Due a battle: True
+Castle Expansion History:
+     Year: 1376  Due a battle: False
+     Year: 1386  Due a battle: False
+     Year: 1398  Due a battle: True
+     Year: 1500  Due a battle: True
+Castle Expansion History:
+     Year: 1376  Due a battle: False
+     Year: 1386  Due a battle: False
+     Year: 1398  Due a battle: True
+     Year: 1500  Due a battle: True
+BATTLE EVENT (1800)
+Starting battle...
+WARNING: Castle bound doesnt allow to deploy cannon battalion flank enough near
+  aaarghh!...................Attackers victory!!!
+Reason: The Wall_61 has been climbed at [173.863665217, 747.582658398, 8.0]
+Spent time: 19 rounds
+WARNING: Castle bound doesnt allow to deploy cannon battalion flank enough near
+  honour!...................Attackers victory!!!
+Reason: The Wall_61 has been climbed at [168.001317846, 760.695657623, 8.0]
+Spent time: 19 rounds
+WARNING: Castle bound doesnt allow to deploy cannon battalion flank enough near
+  ouch!...................Attackers victory!!!
+Reason: The Wall_80 has been climbed at [168.915233934, 789.613033552, 8.0]
+Spent time: 19 rounds
+WARNING: Castle bound doesnt allow to deploy cannon battalion flank enough near
+  fight!....................
+Attackers victory!!!
+Reason: The Wall_80 has been climbed at [169.000129128, 789.695962276, 8.0]
+Spent time: 20 rounds
+WARNING: Castle bound doesnt allow to deploy cannon battalion flank enough near
+  fortheglory!...................Attackers victory!!!
+Reason: The Wall_80 has been climbed at [168.613400379, 789.31819152, 8.0]
+Spent time: 19 rounds
+WARNING: Castle bound doesnt allow to deploy cannon battalion flank enough near
+  honour!....................
+...Attackers victory!!!
+Reason: The Wall_61 has been climbed at [180.968435121, 731.690587125, 8.0]
+Spent time: 23 rounds
+WARNING: Castle bound doesnt allow to deploy cannon battalion flank enough near
+   #*&fu*k?#@!...................Attackers victory!!!
+Reason: The Wall_61 has been climbed at [167.695908116, 761.378803348, 8.0]
+Spent time: 19 rounds
+WARNING: Castle bound doesnt allow to deploy cannon battalion flank enough near
+  defend!....................
+Attackers victory!!!
+Reason: The Wall_61 has been climbed at [170.388250163, 755.356526445, 8.0]
+Spent time: 20 rounds
+WARNING: Castle bound doesnt allow to deploy cannon battalion flank enough near
+  surrender!...................Attackers victory!!!
+Reason: The Wall_80 has been climbed at [169.027166367, 789.722373238, 8.0]
+Spent time: 19 rounds
+WARNING: Castle bound doesnt allow to deploy cannon battalion flank enough near
+  itsagooddaytodie...................Attackers victory!!!
+Reason: The Wall_61 has been climbed at [168.199125518, 760.253198026, 8.0]
+Spent time: 19 rounds
+WARNING: Castle bound doesnt allow to deploy cannon battalion flank enough near
+STATISTICS
+Number of games: 10
+Mean rounds per game: 19
+Attackers victories: 10(100.0%)
+Defenders victories: 0(0.0%)
+Construction defeats: 
+    Climbed:
+        Wall_61 climbed 6 times. Weakest point: [168.713608552, 759.102393545, 8.0]
+        Wall_80 climbed 4 times. Weakest point: [169.020407057, 789.715770497, 8.0]
+    Fall:
+    Siege Tower attached:
+Weakest construction: Wall_61 at [168.713608552, 759.102393545, 8.0],  defeated 6 times
+Defenders defeats (by killing): 0
+Attackers defeats (by killing): 0
+Current castle design should be improved
+Wall Evolution: Tower evolved to bastion
+A new tower has been inserted, or an old one has been upgraded
+WARNING: Castle bound doesnt allow to deploy cannon battalion flank enough near
+   #*&fu*k?#@!....................
+.Attackers victory!!!
+Reason: The Wall_61 has been climbed at [180.13352221, 733.558134655, 8.0]
+Spent time: 21 rounds
+WARNING: Castle bound doesnt allow to deploy cannon battalion flank enough near
+  honour!....................
+Attackers victory!!!
+Reason: The Wall_61 has been climbed at [177.9945919, 738.342530687, 8.0]
+Spent time: 20 rounds
+WARNING: Castle bound doesnt allow to deploy cannon battalion flank enough near
+  honour!....................
+.Attackers victory!!!
+Reason: The Wall_61 has been climbed at [181.096689278, 731.403706026, 8.0]
+Spent time: 21 rounds
+WARNING: Castle bound doesnt allow to deploy cannon battalion flank enough near
+  theresistanceisfutile....................
+..Attackers victory!!!
+Reason: The Wall_61 has been climbed at [180.041809857, 733.763278422, 8.0]
+Spent time: 22 rounds
+WARNING: Castle bound doesnt allow to deploy cannon battalion flank enough near
+  formyking!....................
+Attackers victory!!!
+Reason: The Wall_61 has been climbed at [177.95034887, 738.441494256, 8.0]
+Spent time: 20 rounds
+WARNING: Castle bound doesnt allow to deploy cannon battalion flank enough near
+  theresistanceisfutile....................
+Attackers victory!!!
+Reason: The Wall_61 has been climbed at [177.35137155, 739.781297008, 8.0]
+Spent time: 20 rounds
+WARNING: Castle bound doesnt allow to deploy cannon battalion flank enough near
+  fortheglory!....................
+Attackers victory!!!
+Reason: The Wall_61 has been climbed at [177.101170794, 740.340950352, 8.0]
+Spent time: 20 rounds
+WARNING: Castle bound doesnt allow to deploy cannon battalion flank enough near
+  die!....................
+.Attackers victory!!!
+Reason: The Wall_61 has been climbed at [180.629087657, 732.449645357, 8.0]
+Spent time: 21 rounds
+WARNING: Castle bound doesnt allow to deploy cannon battalion flank enough near
+  fortheglory!....................
+Attackers victory!!!
+Reason: The Wall_61 has been climbed at [176.757822718, 741.108957223, 8.0]
+Spent time: 20 rounds
+WARNING: Castle bound doesnt allow to deploy cannon battalion flank enough near
+  fight!....................
+Attackers victory!!!
+Reason: The Wall_61 has been climbed at [177.251779714, 740.004065736, 8.0]
+Spent time: 20 rounds
+WARNING: Castle bound doesnt allow to deploy cannon battalion flank enough near
+STATISTICS
+Number of games: 10
+Mean rounds per game: 20
+Attackers victories: 10(100.0%)
+Defenders victories: 0(0.0%)
+Construction defeats: 
+    Climbed:
+        Wall_61 climbed 10 times. Weakest point: [177.302279095, 739.891107853, 8.0]
+    Fall:
+    Siege Tower attached:
+Weakest construction: Wall_61 at [177.302279095, 739.891107853, 8.0],  defeated 10 times
+Defenders defeats (by killing): 0
+Attackers defeats (by killing): 0
+Current castle design should be improved
+Wall Evolution: Tower evolved to bastion
+Wall Evolution: Not enough space to evolve the tower
+Wall Evolution: Not enough space to place the tower)
+Cannot place any new tower. Evolving the whole city
+WARNING: Castle::ExpandCastle -> None groupID has been specified
+Extending castle
+Castle Expansion History:
+     Year: 1376  Due a battle: False
+     Year: 1386  Due a battle: False
+     Year: 1398  Due a battle: True
+     Year: 1500  Due a battle: True
+     Year: 1800  Due a battle: True

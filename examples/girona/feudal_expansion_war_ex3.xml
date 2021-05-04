@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--  simulation: City expansion XML template -->
+<!--  All parameters are mandatory except for those that are marked as optional -->
+
+
+<Game>
+    
+    <Type>CityExpansion</Type>				<!-- Available types: CityExpansion, Battle. Required -->
+    
+    <!-- Time Range, in centuries. The starting year will be the first year of first century. [8,19] by default  -->
+    <TimeRange>[11,19]</TimeRange>
+    
+    
+    <!-- Battlefield settings -->
+    <Battlefield>
+        <Bounding>1600</Bounding>							<!-- Battlefield size (square). Required -->
+        <CellSize>10.0</CellSize>							<!-- Cellsize (square). Required -->
+        
+
+       <Rivers>
+	       <Trace>				<!-- Onyar+Ter -->
+	           <Width>30.0</Width>
+	           <Polyline>
+	               <Vertex>[0.0, 874.31]</Vertex>
+	               <Vertex>[285.24, 949.72]</Vertex>
+	               <Vertex>[404.37, 955.19]</Vertex>
+	               <Vertex>[525.68, 927.86]</Vertex>
+	               <Vertex>[708.19, 860.10]</Vertex>
+	               <Vertex>[1019.67, 963.93]</Vertex>
+	           </Polyline>
+	       </Trace>
+
+	       <Trace>				<!-- Onyar -->
+	           <Width>15.0</Width>
+	           <Polyline>
+	               <Vertex>[1019.67, 963.93]</Vertex>
+	               <Vertex>[1144.26, 974.86]</Vertex>
+	               <Vertex>[1259.01, 925.68]</Vertex>
+	               <Vertex>[1511.47, 918.03]</Vertex>
+	               <Vertex>[1639.64, 951.91]</Vertex>
+	           </Polyline>
+	       </Trace>
+
+	       <Trace>				<!-- Ter -->
+	           <Width>25.0</Width>
+	           <Polyline>
+	               <Vertex>[684.15, 1600.0]</Vertex>
+				   <Vertex>[684.15, 1325.68]</Vertex>
+	               <Vertex>[674.31, 1151.91]</Vertex>
+	               <Vertex>[647.0, 1071.03]</Vertex>
+	               <Vertex>[512.56, 930.05]</Vertex>
+	           </Polyline>
+	       </Trace>
+       </Rivers>
+
+    </Battlefield>
+    
+    
+    <!-- Initial castle data -->
+    <Castle>
+    	<Orientation>[0.0, -1.0]</Orientation>	    		<!-- Castle front direction on the battlefield (used as reference to construct squared towers
+    															 Optional (taken from global settings) -->
+        
+        <!-- Set the city shape by polyline method -->
+        <Shape>
+            <Vertex>
+                <Point>[479.78,	726.77]</Point>
+                <TowerType>SquaredTower</TowerType>
+            </Vertex>
+			<Vertex>
+                <Point>[525.68,	624.04]</Point>
+                <TowerType>SquaredTower</TowerType>
+            </Vertex>
+			<Vertex>
+                <Point>[593.44,	547.54]</Point>
+            </Vertex>
+			<Vertex>
+                <Point>[597.81,	501.63]</Point>
+            </Vertex>
+			<Vertex>
+                <Point>[626.22,	457.92]</Point>
+                <TowerType>RoundedTower</TowerType>			<!-- Torre Gironella -->
+            </Vertex>
+			<Vertex>
+                <Point>[618.57,	513.66]</Point>                
+            </Vertex>
+			<Vertex>
+                <Point>[656.83,	597.81]</Point>
+            </Vertex>
+			<Vertex>
+                <Point>[674.31,	661.20]</Point>
+			</Vertex>
+			<Vertex>
+                <Point>[703.82, 708.19]</Point>
+            </Vertex>
+			<Vertex>
+                <Point>[772.67, 745.35]</Point>
+                <TowerType>SquaredTower</TowerType>
+            </Vertex>
+			<Vertex>
+                <Point>[757.37, 800.0]</Point>
+                <TowerType>SquaredTower</TowerType> 
+            </Vertex>
+			<Vertex>
+                <Point>[641.53, 834.972]</Point>
+                <TowerType>SquaredTower</TowerType>  
+            </Vertex>
+			<Vertex>
+                <Point>[512.56, 843.71]</Point>
+            </Vertex>
+			<Vertex>
+                <Point>[512.56,	742.07]</Point>
+            </Vertex>
+            
+       </Shape>
+        
+        
+        
+    </Castle>
+    
+    
+    <!-- City evolution patterns (one or more) -->
+    <CityEvolutions>
+        
+        <!-- South (Areny i Vilanova) -->   
+		<Group>				
+            <ID>1</ID>
+            <Evolutions>
+			    <Evolution>
+		            <TimeRange>[1050, 1376]</TimeRange>
+		            <Direction>[330.26, 70.61]</Direction>
+		            <HousesPerYear>0.7</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[822.62, 612.02]</P1>
+		                <P2>[755.95, 809.83]</P2>
+		            </SegmentBase>
+		        </Evolution>
+		        
+		      
+		   
+		        <Evolution>
+		            <TimeRange>[1050, 1376]</TimeRange>
+		            <Direction>[118.03, -48.08]</Direction>
+		            <HousesPerYear>0.3</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[621.96, 557.37]</P1>
+		                <P2>[700.81, 705.31]</P2>
+		            </SegmentBase>
+		        </Evolution>
+	        </Evolutions>
+   		</Group>
+        
+		
+		
+		<!-- North (St Feliu i St Pere)-->
+        <Group>					
+            <ID>2</ID>
+            <Evolutions>
+		        <Evolution>
+		            <TimeRange>[1050, 1386]</TimeRange>
+		            <Direction>[96.17, 37.15]</Direction>
+		            <HousesPerYear>0.40</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[433.87, 702.73]</P1>
+		                <P2>[349.72, 826.22]</P2>
+		            </SegmentBase>
+		        </Evolution>
+		 
+		        <Evolution>
+		            <TimeRange>[1050, 1386]</TimeRange>
+		            <Direction>[-54.64, -48.08]</Direction>
+		            <HousesPerYear>0.20</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[403.27, 702.73]</P1>
+		                <P2>[325.68, 825.13]</P2>
+		            </SegmentBase>
+		        </Evolution>
+	        </Evolutions>
+        </Group>
+        
+        
+        <!-- West (Mercadal) -->
+
+        <Group>
+            <ID>3</ID>
+            <Evolutions>
+                <Evolution>
+                    <TimeRange>[1300, 1400]</TimeRange>
+                    <Direction>[62.29, 109.28]</Direction>
+                    <HousesPerYear>1</HousesPerYear>
+                    <SegmentBase>
+                        <P1>[701.63, 924.59]</P1>
+                        <P2>[1055.73, 1036.06]</P2>
+                    </SegmentBase>
+                </Evolution>
+
+                <Evolution>
+                    <TimeRange>[1300, 1400]</TimeRange>
+                    <Direction>[21.85, 128.96]</Direction>
+                    <HousesPerYear>1</HousesPerYear>
+                    <SegmentBase>
+                        <P1>[1098.32, 1042.62]</P1>
+                        <P2>[1289.61, 1003.27]</P2>
+                    </SegmentBase>
+                </Evolution>
+            </Evolutions>
+        </Group>
+
+	</CityEvolutions>
+    
+    
+    
+    
+    <!-- City expansion (new wall) years (one or more). Optional -->
+    <CityExpansion>
+        
+        <WallDimensions>[50.0, 150.0]</WallDimensions>		<!-- Minimum and maximum wall dimensions for each expansion. Optional -->
+
+
+        <Expansion>
+            <Year>1376</Year>
+            <GroupID>1</GroupID>
+        </Expansion>
+
+
+       <Expansion>
+            <Year>1386</Year>
+            <GroupID>2</GroupID>
+        </Expansion>
+        
+
+        <Expansion>
+            <Year>1400</Year>
+            <GroupID>3</GroupID>
+        </Expansion>
+
+        <YearsBetweenExpansions>5</YearsBetweenExpansions>
+
+    </CityExpansion>
+    
+
+    <!-- Battle events -->
+    <BattleEvents>
+
+
+         <Battle>
+            <Year>1700</Year>
+            <Simulations>10</Simulations>
+            <RepeatUntilDefendersWin>True</RepeatUntilDefendersWin>
+            <ForceNoCastleEvolution>True</ForceNoCastleEvolution>
+
+            <Defenders>
+                <Archers>1400</Archers>
+                <Cannons>200</Cannons>
+            </Defenders>
+
+            <Attackers>
+                <Flank>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>600</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>200</Number>
+                        </Battalion>
+                        <Battalion>
+                            <Type>"Cannons"</Type>
+                            <Number>6</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+
+               <Flank>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>600</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>200</Number>
+                        </Battalion>
+                        <Battalion>
+                            <Type>"Cannons"</Type>
+                            <Number>6</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+
+               <Flank>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>600</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>200</Number>
+                        </Battalion>
+                        <Battalion>
+                            <Type>"Cannons"</Type>
+                            <Number>6</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+
+               <Flank>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>600</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>200</Number>
+                        </Battalion>
+                        <Battalion>
+                            <Type>"Cannons"</Type>
+                            <Number>6</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+               <Flank>
+                    <RandomDirection>True</RandomDirection>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>600</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>200</Number>
+                        </Battalion>
+                        <Battalion>
+                            <Type>"Cannons"</Type>
+                            <Number>6</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+
+            </Attackers>
+
+        </Battle>
+
+
+
+    </BattleEvents>
+
+
+    <!-- Evolution checkings. Just printing out the castle evolution history. Optional -->
+    <ExpansionCheckings>
+        <Year>1405</Year>
+        <Year>1505</Year>
+        <Year>1605</Year>
+        <Year>1705</Year>
+        <Year>1805</Year>
+    </ExpansionCheckings>
+
+
+
+
+
+
+
+    
+    
+</Game>

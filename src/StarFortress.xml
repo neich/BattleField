@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--  Game: City expansion XML template -->
+<!--  All parameters are mandatory except for those that are marked as optional -->
+
+
+<Game>
+    
+    <Type>CityExpansion</Type>				<!-- Available types: CityExpansion, Battle. Required -->
+    
+    <!-- Time Range, in centuries. The starting year will be the first year of first century. [8,19] by default  -->
+    <TimeRange>[18,19]</TimeRange>
+    
+    
+    <!-- Battlefield settings -->
+    <Battlefield>
+        <Bounding>1000.0</Bounding>							<!-- Battlefield size (square). Required -->
+        <CellSize>10.0</CellSize>							<!-- Cellsize (square). Required -->
+    </Battlefield>
+    
+    
+    <!-- Initial castle data -->
+    <Castle>
+    	<Orientation>[0.0, -1.0]</Orientation>	    		<!-- Castle front direction on the battlefield (used as reference to construct squared towers
+    															 Optional (taken from global settings) -->
+        <OldCity>
+            <House>[350.0, 500.0]</House>
+                <House>[370.0, 500.0]</House>
+                <House>[390.0, 500.0]</House>
+                <House>[410.0, 500.0]</House>
+                <House>[430.0, 500.0]</House>
+                <House>[370.0, 520.0]</House>
+                <House>[390.0, 520.0]</House>
+                <House>[410.0, 520.0]</House>
+                <House>[430.0, 520.0]</House>
+                <House>[390.0, 540.0]</House>
+                <House>[410.0, 540.0]</House>
+                <House>[430.0, 540.0]</House>
+                <House>[390.0, 560.0]</House>
+                <House>[410.0, 560.0]</House>
+                <House>[430.0, 560.0]</House>
+                <House>[390.0, 580.0]</House>
+                <House>[410.0, 580.0]</House>
+                <House>[430.0, 580.0]</House>
+
+            <House>[410.0, 675.0]</House>
+                <House>[410.0, 675.0]</House>
+                <House>[430.0, 675.0]</House>
+                <House>[450.0, 675.0]</House>
+                <House>[470.0, 675.0]</House>
+                <House>[490.0, 675.0]</House>
+                <House>[525.0, 675.0]</House>
+                <House>[545.0, 675.0]</House>
+                <House>[565.0, 675.0]</House>
+                <House>[410.0, 655.0]</House>
+                <House>[430.0, 655.0]</House>
+                <House>[450.0, 655.0]</House>
+                <House>[470.0, 655.0]</House>
+                <House>[490.0, 655.0]</House>
+                <House>[525.0, 655.0]</House>
+                <House>[545.0, 655.0]</House>
+                <House>[565.0, 655.0]</House>
+                <House>[585.0, 655.0]</House>
+                <House>[410.0, 635.0]</House>
+                <House>[430.0, 635.0]</House>
+                <House>[450.0, 635.0]</House>
+                <House>[470.0, 635.0]</House>
+                <House>[490.0, 635.0]</House>
+                <House>[525.0, 635.0]</House>
+                <House>[545.0, 635.0]</House>
+                <House>[565.0, 635.0]</House>
+                <House>[585.0, 635.0]</House>
+                <House>[410.0, 615.0]</House>
+                <House>[430.0, 615.0]</House>
+                <House>[450.0, 615.0]</House>
+                <House>[470.0, 615.0]</House>
+                <House>[490.0, 615.0]</House>
+                <House>[525.0, 615.0]</House>
+                <House>[545.0, 615.0]</House>
+                <House>[565.0, 615.0]</House>
+                <House>[585.0, 615.0]</House>
+            <House>[585.0, 675.0]</House>
+
+            <House>[650.0, 500.0]</House>
+                <House>[630.0, 500.0]</House>
+                <House>[610.0, 500.0]</House>
+                <House>[590.0, 500.0]</House>
+                <House>[570.0, 500.0]</House>
+                <House>[630.0, 520.0]</House>
+                <House>[610.0, 520.0]</House>
+                <House>[590.0, 520.0]</House>
+                <House>[570.0, 520.0]</House>
+                <House>[610.0, 540.0]</House>
+                <House>[590.0, 540.0]</House>
+                <House>[570.0, 540.0]</House>
+                <House>[610.0, 560.0]</House>
+                <House>[590.0, 560.0]</House>
+                <House>[570.0, 560.0]</House>
+                <House>[590.0, 580.0]</House>
+                <House>[590.0, 580.0]</House>
+                <House>[570.0, 580.0]</House>
+
+            <House>[500.0, 400.0]</House>
+                <House>[480.0, 420.0]</House>
+                <House>[500.0, 420.0]</House>
+                <House>[520.0, 420.0]</House>
+                <House>[460.0, 440.0]</House>
+                <House>[480.0, 440.0]</House>
+                <House>[500.0, 440.0]</House>
+                <House>[520.0, 440.0]</House>
+                <House>[540.0, 440.0]</House>
+                <House>[440.0, 460.0]</House>
+                <House>[460.0, 460.0]</House>
+                <House>[480.0, 460.0]</House>
+                <House>[500.0, 460.0]</House>
+                <House>[520.0, 460.0]</House>
+                <House>[540.0, 460.0]</House>
+                <House>[560.0, 460.0]</House>
+
+
+
+
+        </OldCity>
+
+
+    </Castle>
+    
+
+    
+
+    
+
+    
+    <!-- StarFortress construction. Optional -->
+    <StarFortress>
+
+        <Activate>True</Activate>						<!-- The star fortress wont be created if StarFortress tag isnt specified or if this tag is False. If you want to activate
+        													 the star fortress but using all standard parameters, just set to True this tag -->
+
+
+    </StarFortress>
+
+
+
+    
+    
+</Game>

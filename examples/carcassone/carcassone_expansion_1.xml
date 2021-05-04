@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--  Game: City expansion XML template -->
+<!--  All parameters are mandatory except for those that are marked as optional -->
+
+
+<Game>
+
+    <Type>CityExpansion</Type>				<!-- Available types: CityExpansion, Battle. Required -->
+
+    <!-- Time Range, in centuries. The starting year will be the first year of first century. [8,19] by default  -->
+    <TimeRange>[1,17]</TimeRange>
+
+        <!-- Battlefield settings -->
+    <Battlefield>
+        <Bounding>2000</Bounding>							<!-- Battlefield size (square). Required -->
+        <CellSize>10.0</CellSize>							<!-- Cellsize (square). Required -->
+
+       <Rivers>
+	       <Trace>
+	           <Width>50.0</Width>
+	           <Polyline>
+	               <Vertex>[0.0, 530.0]</Vertex>
+                   <Vertex>[350.0, 0.0]</Vertex>
+                </Polyline>
+            </Trace>
+        </Rivers>
+
+
+    </Battlefield>
+
+
+    <!-- Initial castle data -->
+    <Castle>
+    	<Orientation>[0.0, -1.0]</Orientation>	    		<!-- Castle front direction on the battlefield (used as reference to construct squared towers
+    															 Optional (taken from global settings) -->
+        <CenterCastle>False</CenterCastle>
+
+        <Shape>
+           <Vertex>
+                <Point>[1075.0, 955.0]</Point>
+                <TowerType>RoundedTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[994.0, 941.0]</Point>
+                <TowerType>RoundedTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[1013.0, 886.0]</Point>
+                <TowerType>RoundedTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[1027.0, 780.0]</Point>
+                <TowerType>RoundedTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[1113.0, 800.0]</Point>
+                <TowerType>RoundedTower</TowerType>
+            </Vertex>
+        </Shape>
+
+        <!-- Set of initial houses. The curtain wall is constructed from them. Required -->
+        <!--<OldCity>
+            <House>[1036, 793]</House>
+            <House>[1031, 814]</House>
+            <House>[1027, 832]</House>
+            <House>[1025, 858]</House>
+            <House>[1022, 877]</House>
+            <House>[1019, 891]</House>
+            <House>[1010, 908]</House>
+            <House>[1003, 927]</House>
+            <House>[1037, 907]</House>
+            <House>[1042, 881]</House>
+            <House>[1047, 861]</House>
+            <House>[1053, 840]</House>
+            <House>[1056, 816]</House>
+            <House>[1076, 820]</House>
+            <House>[1072, 844]</House>
+            <House>[1066, 865]</House>
+            <House>[1061, 844]</House>
+            <House>[1055, 811]</House>
+            <House>[1100, 808]</House>
+            <House>[1092, 833]</House>
+            <House>[1087, 857]</House>
+            <House>[1081, 883]</House>
+            <House>[1068, 935]</House>
+       </OldCity>-->
+
+
+    </Castle>
+
+    <!-- City evolution patterns (one or more) -->
+    <CityEvolutions>
+
+        <!-- South (Areny i Vilanova) -->
+		<Group>
+            <ID>1</ID>
+            <Evolutions>
+			    <Evolution>
+		            <TimeRange>[1, 100]</TimeRange>
+		            <Direction>[-170, 164]</Direction>
+		            <HousesPerYear>0.9</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[1028, 1080]</P1>
+		                <P2>[1310, 1254]</P2>
+		            </SegmentBase>
+		        </Evolution>
+			    <Evolution>
+		            <TimeRange>[1, 100]</TimeRange>
+		            <Direction>[90, -302]</Direction>
+		            <HousesPerYear>1</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[1100, 1100]</P1>
+		                <P2>[1300, 1220]</P2>
+		            </SegmentBase>
+		        </Evolution>
+			    <Evolution>
+		            <TimeRange>[1, 100]</TimeRange>
+		            <Direction>[104, -64]</Direction>
+		            <HousesPerYear>0.6</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[1110, 688]</P1>
+		                <P2>[1206, 822]</P2>
+		            </SegmentBase>
+		        </Evolution>
+			    <Evolution>
+		            <TimeRange>[1, 100]</TimeRange>
+		            <Direction>[138, 18]</Direction>
+		            <HousesPerYear>0.6</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[998, 968]</P1>
+		                <P2>[994, 1040]</P2>
+		            </SegmentBase>
+		        </Evolution>
+			    <Evolution>
+		            <TimeRange>[1, 100]</TimeRange>
+		            <Direction>[54, -38]</Direction>
+		            <HousesPerYear>0.4</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[1372, 1012]</P1>
+		                <P2>[1362, 806]</P2>
+		            </SegmentBase>
+		        </Evolution>
+			    <Evolution>
+		            <TimeRange>[1, 100]</TimeRange>
+		            <Direction>[-170, 164]</Direction>
+		            <HousesPerYear>0.4</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[946, 1222]</P1>
+		                <P2>[1108, 1352]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+            </Evolutions>
+        </Group>
+    </CityEvolutions>
+
+    <!-- City expansion (new curtain wall) years (one or more). Optional -->
+    <CityExpansion>
+
+        <WallDimensions>[50.0, 150.0]</WallDimensions>		<!-- Minimum and maximum wall dimensions for each expansion. Optional -->
+
+
+        <Expansion>
+            <Year>100</Year>
+            <GroupID>1</GroupID>
+            <WallHeight>22.0</WallHeight>
+            <TowerHeight>25.0</TowerHeight>
+        </Expansion>
+
+        <Expansion>
+            <Year>1250</Year>
+            <GroupID>1</GroupID>
+            <WallHeight>10.0</WallHeight>
+            <TowerHeight>12.0</TowerHeight>
+        </Expansion>
+
+    </CityExpansion>
+</Game>

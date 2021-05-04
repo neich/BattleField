@@ -1,0 +1,18 @@
+START Event: BattleEvent
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 136.1069909 secs
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 239.867141 secs
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 439.6369886 secs
+Event: BattleEvent, Message: Battle event finished, TIME: 818.6694675 secs
+START Event: BattleEvent
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 250.6979384 secs
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 463.9441125 secs
+Event: BattleEvent, Message: Battle event finished, TIME: 718.6337828 secs
+START Event: BattleEvent
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 226.4397723 secs
+Event: BattleEvent, Message: Battle event finished, TIME: 231.4279485 secs

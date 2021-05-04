@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--  Game: City expansion XML template -->
+<!--  All parameters are mandatory except for those that are marked as optional -->
+
+
+<Game>
+
+    <Type>Inverse</Type>                <!-- Available types: CityExpansion, Battle, Inverse. Required -->
+    <Period>19
+    </Period>                <!-- Time period (century). Used to decide construction types, such are towers -->
+
+    <!-- Battlefield settings -->
+    <Battlefield>
+        <Bounding>1600</Bounding>                            <!-- Battlefield size (square). Required -->
+        <CellSize>10.0</CellSize>                            <!-- Cellsize (square). Required -->
+
+
+        <Rivers>
+            <Trace>                <!-- Onyar+Ter -->
+                <Width>30.0</Width>
+                <Polyline>
+                    <Vertex>[0.0, 874.31]</Vertex>
+                    <Vertex>[285.24, 949.72]</Vertex>
+                    <Vertex>[404.37, 955.19]</Vertex>
+                    <Vertex>[525.68, 927.86]</Vertex>
+                    <Vertex>[708.19, 860.10]</Vertex>
+                    <Vertex>[1019.67, 963.93]</Vertex>
+                </Polyline>
+            </Trace>
+
+            <Trace>                <!-- Onyar -->
+                <Width>15.0</Width>
+                <Polyline>
+                    <Vertex>[1019.67, 963.93]</Vertex>
+                    <Vertex>[1144.26, 974.86]</Vertex>
+                    <Vertex>[1259.01, 925.68]</Vertex>
+                    <Vertex>[1511.47, 918.03]</Vertex>
+                    <Vertex>[1639.64, 951.91]</Vertex>
+                </Polyline>
+            </Trace>
+
+            <Trace>                <!-- Ter -->
+                <Width>25.0</Width>
+                <Polyline>
+                    <Vertex>[684.15, 1600.0]</Vertex>
+                    <Vertex>[684.15, 1325.68]</Vertex>
+                    <Vertex>[674.31, 1151.91]</Vertex>
+                    <Vertex>[647.0, 1071.03]</Vertex>
+                    <Vertex>[512.56, 930.05]</Vertex>
+                </Polyline>
+            </Trace>
+        </Rivers>
+
+    </Battlefield>
+
+
+    <!-- Initial castle data -->
+    <Castle>
+        <Orientation>[0.0, -1.0]</Orientation>
+        <Shape>
+            <Vertex>
+                <Point>[324.628832246, 654.455566666]</Point>
+                <TowerType>SquaredTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[504.297218534, 671.897366885]</Point>
+                <TowerType>SquaredTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[525.68, 624.04]</Point>
+                <TowerType>SquaredTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[593.44, 547.54]</Point>
+            </Vertex>
+            <Vertex>
+                <Point>[597.81, 501.63]</Point>
+            </Vertex>
+            <Vertex>
+                <Point>[626.22, 457.92]</Point>
+                <TowerType>RoundedTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[622.029787383, 521.26954282]</Point>
+                <TowerType>SquaredTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[665.135442641, 484.592261774]</Point>
+                <TowerType>RoundedTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[823.269889291, 537.032488117]</Point>
+                <TowerType>RoundedTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[965.645481423, 584.246794901]</Point>
+                <TowerType>RoundedTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[1108.02107356, 631.461101685]</Point>
+                <TowerType>SquaredTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[1252.24057289, 679.286881256]</Point>
+                <TowerType>RoundedTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[1247.7313868, 787.114978106]</Point>
+                <TowerType>SquaredTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[1161.84107857, 915.034264082]</Point>
+                <TowerType>RoundedTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[1014.19685466, 888.554401044]</Point>
+                <TowerType>RoundedTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[866.552630756, 862.074538006]</Point>
+                <TowerType>SquaredTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[716.567905433, 812.318118536]</Point>
+                <TowerType>RoundedTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[641.53, 834.972]</Point>
+                <TowerType>SquaredTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[550.278890615, 841.15446254]</Point>
+                <TowerType>RoundedTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[521.956744875, 875.806742645]</Point>
+                <TowerType>SquaredTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[403.264748529, 907.038838656]</Point>
+                <TowerType>SquaredTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[253.549077476, 829.076128612]</Point>
+                <TowerType>RoundedTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[224.900918245, 746.551563035]</Point>
+                <TowerType>RoundedTower</TowerType>
+            </Vertex>
+
+        </Shape>
+    </Castle>
+    <!-- Define how attackers populate the battlefield. This is a different way than city evolution battle events, so here the troops are placed manually -->
+    <!-- An infantry unit has to be defined as minimum, so the game ends when a soldier climbs the wall -->
+    <AttackersPopulate>
+        <ArmySize>
+            <Battalion>["Infantry", 1000]</Battalion>
+
+<!--
+            <Battalion>["Archers", 400]</Battalion>
+            <Battalion>["SiegeTowers", 3]</Battalion>
+-->
+        </ArmySize>
+
+
+        <Battalion>
+            <Type>"Infantry"</Type>
+            <DeploymentByRange>
+                <First>[10, 9]</First>
+                <Last>[11, 11]</Last>
+            </DeploymentByRange>
+        </Battalion>
+
+        <Battalion>
+            <Type>"Infantry"</Type>
+            <DeploymentByRange>
+                <First>[5, 17]</First>
+                <Last>[8, 20]</Last>
+            </DeploymentByRange>
+        </Battalion>
+
+        <Battalion>
+            <Type>"Infantry"</Type>
+            <DeploymentByRange>
+                <First>[10, 24]</First>
+                <Last>[11, 25]</Last>
+            </DeploymentByRange>
+        </Battalion>
+
+        <Battalion>
+            <Type>"Infantry"</Type>
+            <DeploymentByRange>
+                <First>[14, 20]</First>
+                <Last>[16, 21]</Last>
+            </DeploymentByRange>
+        </Battalion>
+
+        <Battalion>
+            <Type>"Infantry"</Type>
+            <DeploymentByRange>
+                <First>[20, 15]</First>
+                <Last>[21, 18]</Last>
+            </DeploymentByRange>
+        </Battalion>
+
+
+               <!--
+        <Battalion>
+            <Type>"Infantry"</Type>
+            <DeploymentByRange>
+	            <First>[144, 3]</First>
+	            <Last>[144, 46]</Last>
+            </DeploymentByRange>
+        </Battalion>
+
+        <Battalion>
+            <Type>"Infantry"</Type>
+            <DeploymentByRange>
+	            <First>[4, 40]</First>
+	            <Last>[45, 40]</Last>
+            </DeploymentByRange>
+        </Battalion>
+
+        <Battalion>
+            <Type>"Infantry"</Type>
+            <DeploymentByRange>
+		         <First>[4, 1300]</First>
+		         <Last>[45, 1300]</Last>
+            </DeploymentByRange>
+        </Battalion>
+
+
+
+
+        <Battalion>
+            <Type>"Archers"</Type>
+            <Number>100</Number>
+            <DeploymentByRange>
+	            <First>[100, 12]</First>
+	            <Last>[100, 36]</Last>
+            </DeploymentByRange>
+            <BattalionSize>3</BattalionSize>
+        </Battalion>
+
+        <Battalion>
+            <Type>"Archers"</Type>
+            <Number>100</Number>
+            <DeploymentByRange>
+	            <First>[480, 12]</First>
+	            <Last>[480, 36]</Last>
+            </DeploymentByRange>
+            <BattalionSize>3</BattalionSize>
+        </Battalion>
+
+
+        <Battalion>
+            <Type>"Archers"</Type>
+            <Number>100</Number>
+            <DeploymentByRange>
+	            <First>[12, 0]</First>
+	            <Last>[36, 0]</Last>
+            </DeploymentByRange>
+            <BattalionSize>3</BattalionSize>
+        </Battalion>
+
+
+       <Battalion>
+            <Type>"Archers"</Type>
+            <Number>100</Number>
+            <DeploymentByRange>
+	            <First>[12, 39]</First>
+	            <Last>[36, 49]</Last>
+            </DeploymentByRange>
+            <BattalionSize>3</BattalionSize>
+        </Battalion>
+
+
+        <Battalion>
+            <Type>"SiegeTowers"</Type>
+            <SiegeTowerNumber>-1</SiegeTowerNumber>
+        </Battalion>
+-->
+
+    </AttackersPopulate>
+
+    <!--  Define how  defenders populate the castle. This is a different way than city evolution battle events method, so here the troops are placed automatically -->
+    <DefendersPopulate>
+
+        <Archers>2500</Archers>
+        <Cannons>25</Cannons>
+
+    </DefendersPopulate>
+
+    <HasHeightViews>False</HasHeightViews>                    <!-- True if wall height views must to be shown -->
+    <!-- WARNING: dont close any height view while the simulation is running -->
+</Game>

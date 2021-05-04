@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--  Game: City expansion XML template -->
+<!--  All parameters are mandatory except for those that are marked as optional -->
+
+
+<Game>
+    
+    <Type>CityExpansion</Type>				<!-- Available types: CityExpansion, Battle. Required -->
+    
+    <!-- Time Range, in centuries. The starting year will be the first year of first century. [8,19] by default  -->
+    <TimeRange>[11,18]</TimeRange>
+    
+    
+    <!-- Battlefield settings -->
+    <Battlefield>
+        <Bounding>1000</Bounding>							<!-- Battlefield size (square). Required -->
+        <CellSize>10.0</CellSize>							<!-- Cellsize (square). Required -->
+        
+        
+
+    </Battlefield>
+    
+    
+    <!-- Initial castle data -->
+    <Castle>
+    	<Orientation>[0.0, -1.0]</Orientation>	    		<!-- Castle front direction on the battlefield (used as reference to construct squared towers
+    															 Optional (taken from global settings) -->
+        
+        <!-- Set the city shape by polyline method -->
+        <Shape>
+            <Vertex>
+                <Point>[150.0, 150.0]</Point>
+                <TowerType>SquaredTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[150.0, 250.0]</Point>
+                <TowerType>SquaredTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[250.0, 250.0]</Point>
+                <TowerType>SquaredTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[250.0, 150.0]</Point>
+                <TowerType>SquaredTower</TowerType>
+            </Vertex>
+
+
+       </Shape>
+        
+        
+        
+    </Castle>
+    
+    
+    <!-- City evolution patterns (one or more) -->
+    <CityEvolutions>
+        
+        <!-- South (Areny i Vilanova) -->   
+		<Group>				
+            <ID>1</ID>
+            <Evolutions>
+			    <Evolution>
+		            <TimeRange>[1050, 1050]</TimeRange>
+		            <Direction>[0.5, -0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[270.0, 130.0]</P1>
+		                <P2>[270.0, 140.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+			    <Evolution>
+		            <TimeRange>[1050, 1050]</TimeRange>
+		            <Direction>[0.5, 0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[270.0, 270.0]</P1>
+		                <P2>[270.0, 260.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+			    <Evolution>
+		            <TimeRange>[1050, 1050]</TimeRange>
+		            <Direction>[-0.5, 0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[130.0, 270.0]</P1>
+		                <P2>[130.0, 260.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+			    <Evolution>
+		            <TimeRange>[1050, 1050]</TimeRange>
+		            <Direction>[-0.5, -0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[130.0, 130.0]</P1>
+		                <P2>[130.0, 140.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+	        </Evolutions>
+   		</Group>
+        
+
+		<Group>
+            <ID>2</ID>
+            <Evolutions>
+
+			    <Evolution>
+		            <TimeRange>[1150, 1150]</TimeRange>
+		            <Direction>[0.5, 0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[270.0, 270.0]</P1>
+		                <P2>[270.0, 260.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+			    <Evolution>
+		            <TimeRange>[1150, 1150]</TimeRange>
+		            <Direction>[0.5, -0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[270.0, 440.0]</P1>
+		                <P2>[270.0, 430.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+			    <Evolution>
+		            <TimeRange>[1150, 1150]</TimeRange>
+		            <Direction>[-0.5, -0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[440.0, 440.0]</P1>
+		                <P2>[430.0, 430.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+			    <Evolution>
+		            <TimeRange>[1150, 1150]</TimeRange>
+		            <Direction>[-0.5, 0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[440.0, 270.0]</P1>
+		                <P2>[430.0, 260.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+	        </Evolutions>
+   		</Group>
+
+
+
+		<Group>
+            <ID>3</ID>
+            <Evolutions>
+
+			    <Evolution>
+		            <TimeRange>[1200, 1200]</TimeRange>
+		            <Direction>[0.5, 0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[500.0, 530.0]</P1>
+		                <P2>[500.0, 540.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+			    <Evolution>
+		            <TimeRange>[1200, 1200]</TimeRange>
+		            <Direction>[0.5, -0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[630.0, 530.0]</P1>
+		                <P2>[630.0, 540.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+			    <Evolution>
+		            <TimeRange>[1200, 1200]</TimeRange>
+		            <Direction>[-0.5, -0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[630.0, 630.0]</P1>
+		                <P2>[630.0, 640.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+			    <Evolution>
+		            <TimeRange>[1200, 1200]</TimeRange>
+		            <Direction>[-0.5, 0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[500.0, 630.0]</P1>
+		                <P2>[500.0, 640.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+	        </Evolutions>
+   		</Group>
+
+
+
+
+
+		<Group>
+            <ID>4</ID>
+            <Evolutions>
+
+			    <Evolution>
+		            <TimeRange>[1250, 1250]</TimeRange>
+		            <Direction>[0.5, 0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[630.0, 630.0]</P1>
+		                <P2>[630.0, 640.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+			    <Evolution>
+		            <TimeRange>[1250, 1250]</TimeRange>
+		            <Direction>[0.5, -0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[730.0, 630.0]</P1>
+		                <P2>[730.0, 640.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+			    <Evolution>
+		            <TimeRange>[1250, 1250]</TimeRange>
+		            <Direction>[-0.5, -0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[730.0, 730.0]</P1>
+		                <P2>[730.0, 740.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+			    <Evolution>
+		            <TimeRange>[1250, 1250]</TimeRange>
+		            <Direction>[-0.5, 0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[630.0, 730.0]</P1>
+		                <P2>[630.0, 740.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+	        </Evolutions>
+   		</Group>
+
+		<Group>
+            <ID>5</ID>
+            <Evolutions>
+
+			    <Evolution>
+		            <TimeRange>[1300, 1300]</TimeRange>
+		            <Direction>[0.5, 0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[230.0, 170.0]</P1>
+		                <P2>[230.0, 180.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+			    <Evolution>
+		            <TimeRange>[1300, 1300]</TimeRange>
+		            <Direction>[-0.5, 0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[650.0, 170.0]</P1>
+		                <P2>[650.0, 180.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+			    <Evolution>
+		            <TimeRange>[1300, 1300]</TimeRange>
+		            <Direction>[-0.5, -0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[650.0, 330.0]</P1>
+		                <P2>[650.0, 340.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+			    <Evolution>
+		            <TimeRange>[1300, 1300]</TimeRange>
+		            <Direction>[0.5, -0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[230.0, 330.0]</P1>
+		                <P2>[230.0, 340.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+	        </Evolutions>
+   		</Group>
+
+
+		<Group>
+            <ID>6</ID>
+            <Evolutions>
+
+			    <Evolution>
+		            <TimeRange>[1350, 1350]</TimeRange>
+		            <Direction>[0.5, 0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[130.0, 630.0]</P1>
+		                <P2>[130.0, 640.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+			    <Evolution>
+		            <TimeRange>[1350, 1350]</TimeRange>
+		            <Direction>[-0.5, 0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[270.0, 630.0]</P1>
+		                <P2>[270.0, 640.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+			    <Evolution>
+		            <TimeRange>[1350, 1350]</TimeRange>
+		            <Direction>[-0.5, -0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[270.0, 730.0]</P1>
+		                <P2>[270.0, 740.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+			    <Evolution>
+		            <TimeRange>[1350, 1350]</TimeRange>
+		            <Direction>[0.5, -0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[130.0, 730.0]</P1>
+		                <P2>[130.0, 740.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+	        </Evolutions>
+   		</Group>
+
+
+
+		<Group>
+            <ID>7</ID>
+            <Evolutions>
+
+			    <Evolution>
+		            <TimeRange>[1400, 1400]</TimeRange>
+		            <Direction>[0.5, 0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[530.0, 230.0]</P1>
+		                <P2>[530.0, 240.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+			    <Evolution>
+		            <TimeRange>[1400, 1400]</TimeRange>
+		            <Direction>[-0.5, 0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[770.0, 230.0]</P1>
+		                <P2>[770.0, 240.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+			    <Evolution>
+		            <TimeRange>[1400, 1400]</TimeRange>
+		            <Direction>[-0.5, -0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[770.0, 680.0]</P1>
+		                <P2>[770.0, 690.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+			    <Evolution>
+		            <TimeRange>[1400, 1400]</TimeRange>
+		            <Direction>[0.5, -0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[530.0, 680.0]</P1>
+		                <P2>[530.0, 690.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+	        </Evolutions>
+   		</Group>
+
+
+		<Group>
+            <ID>8</ID>
+            <Evolutions>
+
+			    <Evolution>
+		            <TimeRange>[1500, 1500]</TimeRange>
+		            <Direction>[0.5, 0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[80.0, 180.0]</P1>
+		                <P2>[80.0, 190.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+			    <Evolution>
+		            <TimeRange>[1500, 1500]</TimeRange>
+		            <Direction>[-0.5, 0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[920.0, 80.0]</P1>
+		                <P2>[920.0, 90.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+			    <Evolution>
+		            <TimeRange>[1500, 1500]</TimeRange>
+		            <Direction>[-0.5, -0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[920.0, 680.0]</P1>
+		                <P2>[920.0, 690.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+			    <Evolution>
+		            <TimeRange>[1500, 1500]</TimeRange>
+		            <Direction>[0.5, -0.5]</Direction>
+		            <HousesPerYear>1.0</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[80.0, 810.0]</P1>
+		                <P2>[80.0, 820.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+	        </Evolutions>
+   		</Group>
+
+
+	</CityEvolutions>
+    
+    
+    
+    
+    <!-- City expansion (new curtain wall) years (one or more). Optional -->
+    <CityExpansion>
+        
+        <WallDimensions>[50.0, 150.0]</WallDimensions>		<!-- Minimum and maximum wall dimensions for each expansion. Optional -->
+
+
+        <Expansion>
+            <Year>1054</Year>
+            <GroupID>1</GroupID>
+        </Expansion>
+
+
+        <Expansion>
+            <Year>1154</Year>
+            <GroupID>2</GroupID>
+        </Expansion>
+
+
+        <Expansion>
+            <Year>1204</Year>
+            <GroupID>3</GroupID>
+        </Expansion>
+
+        <Expansion>
+            <Year>1254</Year>
+            <GroupID>4</GroupID>
+        </Expansion>
+
+        <Expansion>
+            <Year>1304</Year>
+            <GroupID>5</GroupID>
+        </Expansion>
+
+        <Expansion>
+            <Year>1354</Year>
+            <GroupID>6</GroupID>
+        </Expansion>
+
+        <Expansion>
+            <Year>1404</Year>
+            <GroupID>7</GroupID>
+        </Expansion>
+
+       <Expansion>
+            <Year>1504</Year>
+            <GroupID>8</GroupID>
+        </Expansion>
+
+    </CityExpansion>
+    
+        
+    
+    
+    
+</Game>

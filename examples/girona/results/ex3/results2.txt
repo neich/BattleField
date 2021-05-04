@@ -1,0 +1,435 @@
+ 
+/usr/bin/python2.7 /home/mussoltrek/pycharm-community-3.4.1/helpers/pydev/pydevd.py --multiproc --client 127.0.0.1 --port 56053 --file /home/mussoltrek/workspace/Battles/src/execute.py
+Connected to pydev debugger (build 135.1057)
+pydev debugger: process 666 is connecting
+
+CASTLE EXPANSION EVENT (1376)
+Extending castle
+CASTLE EXPANSION EVENT (1386)
+Extending castle
+CASTLE EXPANSION EVENT (1400)
+Extending castle
+WARNING: CastleSet::ConstructCurtainWall -> Castle set with more than one castle. Choosing the commander
+WARNING: CastleSet::Evolve -> Castle set with more than one castle. Choosing the commander
+Castle Expansion History:
+     Year: 1376  Due a battle: False
+     Year: 1386  Due a battle: False
+     Year: 1400  Due a battle: False
+Castle Expansion History:
+     Year: 1376  Due a battle: False
+     Year: 1386  Due a battle: False
+     Year: 1400  Due a battle: False
+Castle Expansion History:
+     Year: 1376  Due a battle: False
+     Year: 1386  Due a battle: False
+     Year: 1400  Due a battle: False
+BATTLE EVENT (1700)
+Starting battle...
+  defend!....................
+......Attackers victory!!!
+Reason: The Wall_75 has been climbed at [1393.25844251, 1166.91760476, 12.0]
+Spent time: 26 rounds
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Archers
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Cannons
+  theresistanceisfutile...............Attackers victory!!!
+Reason: The Wall_76 has been climbed at [1392.63635099, 1224.66846454, 8.0]
+Spent time: 15 rounds
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Archers
+  ayesir!....................
+.Attackers victory!!!
+Reason: The Wall_40 has been climbed at [370.434664765, 587.770629634, 6.0]
+Spent time: 21 rounds
+  ouch!..................Attackers victory!!!
+Reason: The Wall_39 has been climbed at [201.481686319, 801.413636853, 7.5]
+Spent time: 18 rounds
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Archers
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Cannons
+   #*&fu*k?#@!............Attackers victory!!!
+Reason: The Wall_75 has been climbed at [1404.95524022, 1204.27653348, 8.0]
+Spent time: 12 rounds
+  booummm!.............Attackers victory!!!
+Reason: The Wall_76 has been climbed at [1328.92030752, 1248.3743927, 8.0]
+Spent time: 13 rounds
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Archers
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Cannons
+   #*&fu*k?#@!..........Attackers victory!!!
+Reason: The Wall_76 has been climbed at [1398.75144751, 1220.25936642, 6.0]
+Spent time: 10 rounds
+  die!.................Attackers victory!!!
+Reason: The Wall_77 has been climbed at [1234.55947619, 1275.28533234, 7.5]
+Spent time: 17 rounds
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Archers
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Cannons
+  honour!....................
+Attackers victory!!!
+Reason: The Wall_39 has been climbed at [199.188050933, 801.089689024, 6.0]
+Spent time: 20 rounds
+  fight!....................
+......Attackers victory!!!
+Reason: The Wall_52 has been climbed at [1236.38414097, 685.179980273, 6.0]
+Spent time: 26 rounds
+STATISTICS
+Number of games: 10
+Mean rounds per game: 17
+Attackers victories: 10(100.0%)
+Defenders victories: 0(0.0%)
+Construction defeats: 
+    Climbed:
+        Wall_75 climbed 2 times. Weakest point: [1402.03104079, 1194.9368013, 9.0]
+        Wall_77 climbed 1 times. Weakest point: [1234.55947619, 1275.28533234, 7.5]
+        Wall_76 climbed 3 times. Weakest point: [1392.63635099, 1224.66846454, 8.0]
+        Wall_39 climbed 2 times. Weakest point: [199.761459779, 801.170675981, 6.375]
+        Wall_40 climbed 1 times. Weakest point: [370.434664765, 587.770629634, 6.0]
+        Wall_52 climbed 1 times. Weakest point: [1236.38414097, 685.179980273, 6.0]
+    Fall:
+    Siege Tower attached:
+Weakest construction: Wall_76 at [1392.63635099, 1224.66846454, 8.0],  defeated 3 times
+Defenders defeats (by killing): 0
+Attackers defeats (by killing): 0
+Current castle design should be improved
+Starting upgrading things ....
+Wall Evolution: Tower evolved to bastion
+Wall Evolution: Not enough space to place the tower)
+Wall Evolution: Tower evolved to bastion
+Wall Evolution: New tower added)
+Wall Evolution: Tower evolved to bastion
+Wall Evolution: Tower evolved to bastion
+Ending upgrading things ....
+A new tower has been inserted, or an old one has been upgraded
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Archers
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Cannons
+  defend!....................
+........Attackers victory!!!
+Reason: The Wall_51 has been climbed at [1188.37014444, 658.529734968, 5.5]
+Spent time: 28 rounds
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Archers
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Cannons
+  die!....................
+...Attackers victory!!!
+Reason: The Wall_40 has been climbed at [340.136360013, 622.858912087, 6.0]
+Spent time: 23 rounds
+  fortheglory!....................
+..Attackers victory!!!
+Reason: The Wall_75 has been climbed at [1384.79849079, 1139.89698412, 6.0]
+Spent time: 22 rounds
+  die!....................
+............Attackers victory!!!
+Reason: The Wall_38 has been climbed at [234.16271543, 828.803924413, 12.0]
+Spent time: 32 rounds
+  surrender!....................
+.Attackers victory!!!
+Reason: The Wall_39 has been climbed at [219.83875905, 774.976628314, 6.5]
+Spent time: 21 rounds
+  defend!....................
+.....Attackers victory!!!
+Reason: The Wall_52 has been climbed at [1245.77653511, 710.399536912, 6.0]
+Spent time: 25 rounds
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Archers
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Cannons
+  ouch!....................
+..Attackers victory!!!
+Reason: The Wall_40 has been climbed at [306.794717349, 665.019807207, 5.5]
+Spent time: 22 rounds
+   #*&fu*k?#@!....................
+...Attackers victory!!!
+Reason: The Wall_79 has been climbed at [1155.60576059, 1292.09227006, 5.0]
+Spent time: 23 rounds
+   #*&fu*k?#@!....................
+...........Attackers victory!!!
+Reason: The Wall_52 has been climbed at [1265.02934109, 756.364782224, 8.0]
+Spent time: 31 rounds
+  die!....................
+.......Attackers victory!!!
+Reason: The Wall_45 has been climbed at [619.610193534, 464.419530503, 6.0]
+Spent time: 27 rounds
+STATISTICS
+Number of games: 10
+Mean rounds per game: 25
+Attackers victories: 10(100.0%)
+Defenders victories: 0(0.0%)
+Construction defeats: 
+    Climbed:
+        Wall_75 climbed 1 times. Weakest point: [1384.79849079, 1139.89698412, 6.0]
+        Wall_79 climbed 1 times. Weakest point: [1155.60576059, 1292.09227006, 5.0]
+        Wall_39 climbed 1 times. Weakest point: [219.83875905, 774.976628314, 6.5]
+        Wall_38 climbed 1 times. Weakest point: [234.16271543, 828.803924413, 12.0]
+        Wall_40 climbed 2 times. Weakest point: [315.130128015, 654.479583427, 5.625]
+        Wall_52 climbed 2 times. Weakest point: [1260.2161396, 744.873470896, 7.5]
+        Wall_51 climbed 1 times. Weakest point: [1188.37014444, 658.529734968, 5.5]
+        Wall_45 climbed 1 times. Weakest point: [619.610193534, 464.419530503, 6.0]
+    Fall:
+    Siege Tower attached:
+Weakest construction: Wall_40 at [315.130128015, 654.479583427, 5.625],  defeated 2 times
+Defenders defeats (by killing): 0
+Attackers defeats (by killing): 0
+Current castle design should be improved
+Starting upgrading things ....
+Wall Evolution: Tower evolved to bastion
+Wall Evolution: Not enough space to evolve the tower
+Wall Evolution: Not enough space to place the tower)
+Wall Evolution: Tower evolved to bastion
+Wall Evolution: Not enough space to evolve the tower
+Wall Evolution: Not enough space to place the tower)
+Wall Evolution: Tower evolved to bastion
+Wall Evolution: Not enough space to evolve the tower
+Wall Evolution: Not enough space to place the tower)
+Wall Evolution: Tower evolved to bastion
+Wall Evolution: Not enough space to evolve the tower
+Wall Evolution: Not enough space to place the tower)
+Wall Evolution: New tower added)
+Wall Evolution: Tower evolved to bastion
+Wall Evolution: Not enough space to evolve the tower
+Wall Evolution: Not enough space to place the tower)
+Wall Evolution: Not enough space to place the tower)
+Wall Evolution: Tower added)
+Ending upgrading things ....
+A new tower has been inserted, or an old one has been upgraded
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Archers
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Cannons
+  defend!....................
+....Attackers victory!!!
+Reason: The Wall_75 has been climbed at [1390.37783696, 1157.71710899, 12.0]
+Spent time: 24 rounds
+  booummm!...................Attackers victory!!!
+Reason: The Wall_76 has been climbed at [1318.71231781, 1252.17233522, 12.0]
+Spent time: 19 rounds
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Archers
+  ayesir!....................
+........Attackers victory!!!
+Reason: The Wall_52 has been climbed at [1271.56679725, 773.918532996, 6.0]
+Spent time: 28 rounds
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Archers
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Cannons
+  surrender!....................
+......Attackers victory!!!
+Reason: The Wall_52 has been climbed at [1246.32164248, 711.863206994, 7.5]
+Spent time: 26 rounds
+  surrender!....................
+........Attackers victory!!!
+Reason: The Wall_75 has been climbed at [1384.82522599, 1139.98237486, 12.0]
+Spent time: 28 rounds
+  fortheglory!....................
+Attackers victory!!!
+Reason: The Wall_76 has been climbed at [1370.12097556, 1233.0454422, 12.5]
+Spent time: 20 rounds
+  die!....................
+..............Attackers victory!!!
+Reason: The Wall_38 has been climbed at [243.450199533, 833.494116503, 12.0]
+Spent time: 34 rounds
+  theresistanceisfutile....................
+.....Attackers victory!!!
+Reason: The Wall_52 has been climbed at [1245.87650175, 710.667957766, 6.0]
+Spent time: 25 rounds
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Archers
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Cannons
+  defend!....................
+.......Attackers victory!!!
+Reason: The Wall_74 has been climbed at [1344.04795317, 1046.30923234, 5.0]
+Spent time: 27 rounds
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Archers
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Cannons
+  ayesir!....................
+Attackers victory!!!
+Reason: The Wall_76 has been climbed at [1370.12097556, 1233.0454422, 12.5]
+Spent time: 20 rounds
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Archers
+STATISTICS
+Number of games: 10
+Mean rounds per game: 25
+Attackers victories: 10(100.0%)
+Defenders victories: 0(0.0%)
+Construction defeats: 
+    Climbed:
+        Wall_75 climbed 2 times. Weakest point: [1386.21337873, 1144.4160584, 12.0]
+        Wall_52 climbed 3 times. Weakest point: [1271.56679725, 773.918532996, 6.0]
+        Wall_74 climbed 1 times. Weakest point: [1344.04795317, 1046.30923234, 5.0]
+        Wall_76 climbed 3 times. Weakest point: [1370.12097556, 1233.0454422, 12.5]
+        Wall_38 climbed 1 times. Weakest point: [243.450199533, 833.494116503, 12.0]
+    Fall:
+    Siege Tower attached:
+Weakest construction: Wall_52 at [1271.56679725, 773.918532996, 6.0],  defeated 3 times
+Defenders defeats (by killing): 0
+Attackers defeats (by killing): 0
+Current castle design should be improved
+Starting upgrading things ....
+Wall Evolution: Tower evolved to bastion
+Wall Evolution: Not enough space to evolve the tower
+Wall Evolution: Not enough space to place the tower)
+Wall Evolution: Not enough space to place the tower)
+Wall Evolution: Tower evolved to bastion
+Wall Evolution: Not enough space to evolve the tower
+Wall Evolution: Not enough space to place the tower)
+Wall Evolution: New tower added)
+Wall Evolution: Tower evolved to bastion
+Wall Evolution: Not enough space to evolve the tower
+Wall Evolution: Not enough space to place the tower)
+Ending upgrading things ....
+A new tower has been inserted, or an old one has been upgraded
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Archers
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Cannons
+  formyking!....................
+............Attackers victory!!!
+Reason: The Wall_38 has been climbed at [233.776006027, 828.608635639, 12.0]
+Spent time: 32 rounds
+  formyking!....................
+....................
+..Attackers victory!!!
+Reason: The Wall_49 has been climbed at [896.213431398, 550.261783765, 5.5]
+Spent time: 42 rounds
+  formyking!................Attackers victory!!!
+Reason: The Wall_76 has been climbed at [1370.12097556, 1233.0454422, 8.5]
+Spent time: 16 rounds
+  die!....................
+...........Attackers victory!!!
+Reason: The Wall_52 has been climbed at [1249.55100389, 714.803834517, 8.0]
+Spent time: 31 rounds
+  ayesir!....................
+......Attackers victory!!!
+Reason: The Wall_76 has been climbed at [1337.35918428, 1245.23465904, 12.5]
+Spent time: 26 rounds
+  formyking!....................
+...........Attackers victory!!!
+Reason: The Wall_63 has been climbed at [1117.05082307, 1291.46775141, 6.0]
+Spent time: 31 rounds
+  theresistanceisfutile................Attackers victory!!!
+Reason: The Wall_76 has been climbed at [1370.12097556, 1233.0454422, 8.0]
+Spent time: 16 rounds
+  aaarghh!....................
+....................
+...Attackers victory!!!
+Reason: The Wall_63 has been climbed at [1107.08885724, 1289.30273845, 12.0]
+Spent time: 43 rounds
+  die!....................
+........Attackers victory!!!
+Reason: The Wall_76 has been climbed at [1295.51432606, 1260.80328428, 12.0]
+Spent time: 28 rounds
+  ayesir!................Attackers victory!!!
+Reason: The Wall_75 has been climbed at [1391.50390652, 1161.31371326, 7.0]
+Spent time: 16 rounds
+STATISTICS
+Number of games: 10
+Mean rounds per game: 28
+Attackers victories: 10(100.0%)
+Defenders victories: 0(0.0%)
+Construction defeats: 
+    Climbed:
+        Wall_75 climbed 1 times. Weakest point: [1391.50390652, 1161.31371326, 7.0]
+        Wall_63 climbed 2 times. Weakest point: [1109.5793487, 1289.84399169, 10.5]
+        Wall_76 climbed 4 times. Weakest point: [1305.97554061, 1256.91112797, 12.125]
+        Wall_49 climbed 1 times. Weakest point: [896.213431398, 550.261783765, 5.5]
+        Wall_52 climbed 1 times. Weakest point: [1249.55100389, 714.803834517, 8.0]
+        Wall_38 climbed 1 times. Weakest point: [233.776006027, 828.608635639, 12.0]
+    Fall:
+    Siege Tower attached:
+Weakest construction: Wall_76 at [1305.97554061, 1256.91112797, 12.125],  defeated 4 times
+Defenders defeats (by killing): 0
+Attackers defeats (by killing): 0
+Current castle design should be improved
+Starting upgrading things ....
+Wall Evolution: Tower evolved to bastion
+Wall Evolution: Not enough space to evolve the tower
+Wall Evolution: Not enough space to place the tower)
+Wall Evolution: Tower evolved to bastion
+Wall Evolution: Not enough space to evolve the tower
+Wall Evolution: New tower added)
+Wall Evolution: Tower evolved to bastion
+Wall Evolution: Not enough space to evolve the tower
+Wall Evolution: Not enough space to place the tower)
+Wall Evolution: New tower added)
+Wall Evolution: Not enough space to place the tower)
+Wall Evolution: Tower evolved to bastion
+Wall Evolution: Not enough space to evolve the tower
+Wall Evolution: Not enough space to place the tower)
+Ending upgrading things ....
+A new tower has been inserted, or an old one has been upgraded
+  fortheglory!....................
+..Attackers victory!!!
+Reason: The Wall_78 has been climbed at [1265.71929119, 1268.65231873, 5.0]
+Spent time: 22 rounds
+  itsagooddaytodie....................
+..Attackers victory!!!
+Reason: The Wall_81 has been climbed at [278.799340775, 700.420286644, 5.0]
+Spent time: 22 rounds
+  booummm!....................
+..........Attackers victory!!!
+Reason: The Wall_75 has been climbed at [1384.77735263, 1139.82946998, 12.0]
+Spent time: 30 rounds
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Cannons
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Cannons
+  aaarghh!..................Attackers victory!!!
+Reason: The Wall_76 has been climbed at [1367.81948261, 1233.90172617, 12.0]
+Spent time: 18 rounds
+  theresistanceisfutile...................Attackers victory!!!
+Reason: The Wall_80 has been climbed at [219.522270977, 778.601107628, 6.0]
+Spent time: 19 rounds
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Archers
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Cannons
+  surrender!....................
+...Attackers victory!!!
+Reason: The Wall_40 has been climbed at [348.181728172, 612.685450432, 6.0]
+Spent time: 23 rounds
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Cannons
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Archers
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Cannons
+   #*&fu*k?#@!...................Attackers victory!!!
+Reason: The Wall_80 has been climbed at [219.83875905, 774.976628314, 6.0]
+Spent time: 19 rounds
+  ouch!...................Attackers victory!!!
+Reason: The Wall_76 has been climbed at [1358.89811243, 1237.22097433, 12.0]
+Spent time: 19 rounds
+  surrender!....................
+..Attackers victory!!!
+Reason: The Wall_40 has been climbed at [328.720555634, 637.294329562, 5.0]
+Spent time: 22 rounds
+  ouch!....................
+...............Attackers victory!!!
+Reason: The Wall_52 has been climbed at [1249.31343105, 714.165926676, 12.5]
+Spent time: 35 rounds
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Infantry
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Archers
+ERROR DeployOnCenteredLine -> Not enough space to place any battalion of Cannons
+STATISTICS
+Number of games: 10
+Mean rounds per game: 22
+Attackers victories: 10(100.0%)
+Defenders victories: 0(0.0%)
+Construction defeats: 
+    Climbed:
+        Wall_75 climbed 1 times. Weakest point: [1384.77735263, 1139.82946998, 12.0]
+        Wall_76 climbed 2 times. Weakest point: [1361.12845497, 1236.39116229, 12.0]
+        Wall_80 climbed 2 times. Weakest point: [219.759637032, 775.882748142, 6.0]
+        Wall_78 climbed 1 times. Weakest point: [1265.71929119, 1268.65231873, 5.0]
+        Wall_81 climbed 1 times. Weakest point: [278.799340775, 700.420286644, 5.0]
+        Wall_40 climbed 2 times. Weakest point: [333.585848768, 631.142109779, 5.25]
+        Wall_52 climbed 1 times. Weakest point: [1249.31343105, 714.165926676, 12.5]
+    Fall:
+    Siege Tower attached:
+Weakest construction: Wall_76 at [1361.12845497, 1236.39116229, 12.0],  defeated 2 times
+Defenders defeats (by killing): 0
+Attackers defeats (by killing): 0
+Current castle design should be improved
+Starting upgrading things ....
+Wall Evolution: Not enough space to place the tower)
+Wall Evolution: Not enough space to place the tower)
+Wall Evolution: Not enough space to place the tower)
+Wall Evolution: Tower evolved to bastion
+Wall Evolution: Not enough space to evolve the tower
+Wall Evolution: Not enough space to place the tower)
+Wall Evolution: Tower evolved to bastion
+Wall Evolution: Not enough space to evolve the tower
+Wall Evolution: Not enough space to place the tower)
+Wall Evolution: Tower evolved to bastion
+Wall Evolution: Not enough space to evolve the tower
+Wall Evolution: Not enough space to place the tower)
+Wall Evolution: Not enough space to place the tower)
+Ending upgrading things ....
+Cannot upgrade. Evolving the whole city
+City expansion cancelled (from battle) due a previous one
+Castle Expansion History:
+     Year: 1376  Due a battle: False
+     Year: 1386  Due a battle: False
+     Year: 1400  Due a battle: False
+Castle Expansion History:
+     Year: 1376  Due a battle: False
+     Year: 1386  Due a battle: False
+     Year: 1400  Due a battle: False

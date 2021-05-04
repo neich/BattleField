@@ -1,0 +1,6 @@
+START Event: BattleEvent
+Event: BattleEvent, Message: Battle event finished, TIME: 325.3774848 secs
+START Event: BattleEvent
+Event: BattleEvent, Message: Battle event finished, TIME: 586.6775875 secs
+START Event: BattleEvent
+Event: BattleEvent, Message: Battle event finished, TIME: 2323.1245708 secs

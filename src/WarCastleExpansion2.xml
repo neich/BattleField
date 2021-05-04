@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--  Game: City expansion XML template -->
+<!--  All parameters are mandatory except for those that are marked as optional -->
+
+
+<Game>
+    
+    <Type>CityExpansion</Type>				<!-- Available types: CityExpansion, Battle. Required -->
+    
+    <!-- Time Range, in centuries. The starting year will be the first year of first century. [8,19] by default  -->
+    <TimeRange>[11,19]</TimeRange>
+    
+    
+    <!-- Battlefield settings -->
+    <Battlefield>
+        <Bounding>2000.0</Bounding>							<!-- Battlefield size (square). Required -->
+        <CellSize>10.0</CellSize>							<!-- Cellsize (square). Required -->
+    </Battlefield>
+    
+    
+    <!-- Initial castle data -->
+    <Castle>
+    	<Orientation>[0.0, -1.0]</Orientation>	    		<!-- Castle front direction on the battlefield (used as reference to construct squared towers
+    															 Optional (taken from global settings) -->
+        
+        <Shape>
+            <Vertex>
+                <Point>[970.0, 1125.0]</Point>
+                <TowerType>SquaredTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[830.0, 1015.0]</Point>
+                <TowerType>SquaredTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[875.0, 910.0]</Point>
+                <TowerType>SquaredTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[980.0, 880.0]</Point>
+                <TowerType>SquaredTower</TowerType>
+            </Vertex>
+           <Vertex>
+                <Point>[1140.0, 925.0]</Point>
+                <TowerType>SquaredTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[1130.0, 1090.0]</Point>
+                <TowerType>SquaredTower</TowerType>
+            </Vertex>
+
+        </Shape>
+
+        <Moat>
+            <HasWater>False</HasWater>
+        </Moat>
+
+    </Castle>
+    
+   <CityEvolutions>
+
+
+		<Group>
+            <ID>1</ID>
+            <Evolutions>
+
+			    <Evolution>
+		            <TimeRange>[1100, 1600]</TimeRange>
+		            <Direction>[-0.5, -0.5]</Direction>
+		            <HousesPerYear>0.3</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[875.0, 875.0]</P1>
+		                <P2>[925.0, 825.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+			    <Evolution>
+		            <TimeRange>[1100, 1600]</TimeRange>
+		            <Direction>[-1.0, 0.0]</Direction>
+		            <HousesPerYear>0.3</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[800.0, 950.0]</P1>
+		                <P2>[800.0, 1050.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+			    <Evolution>
+		            <TimeRange>[1100, 1600]</TimeRange>
+		            <Direction>[-1.0, 1.0]</Direction>
+		            <HousesPerYear>0.3</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[850.0, 1100.0]</P1>
+		                <P2>[925.0, 1150.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+			    <Evolution>
+		            <TimeRange>[1100, 1600]</TimeRange>
+		            <Direction>[0.0, 1.0]</Direction>
+		            <HousesPerYear>0.3</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[1000.0, 1150.0]</P1>
+		                <P2>[1050.0, 1150.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+			    <Evolution>
+		            <TimeRange>[1100, 1600]</TimeRange>
+		            <Direction>[1.0, 1.0]</Direction>
+		            <HousesPerYear>0.3</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[1125.0, 1150.0]</P1>
+		                <P2>[1200.0, 1100.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+			    <Evolution>
+		            <TimeRange>[1100, 1600]</TimeRange>
+		            <Direction>[1.0, 0.0]</Direction>
+		            <HousesPerYear>0.3</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[1175.0, 975.0]</P1>
+		                <P2>[1175.0, 1025.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+			    <Evolution>
+		            <TimeRange>[1100, 1600]</TimeRange>
+		            <Direction>[0.5, -0.5]</Direction>
+		            <HousesPerYear>0.3</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[1105.0, 850.0]</P1>
+		                <P2>[1150.0, 900.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+ 			    <Evolution>
+		            <TimeRange>[1100, 1600]</TimeRange>
+		            <Direction>[0.0, -1.0]</Direction>
+		            <HousesPerYear>0.3</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[975.0, 825.0]</P1>
+		                <P2>[1025.0, 825.0]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+
+	        </Evolutions>
+   		</Group>
+    </CityEvolutions>
+
+
+   <BattleEvents>
+
+       <Battle>
+            <Year>1200</Year>
+            <Simulations>10</Simulations>
+            <RepeatUntilDefendersWin>True</RepeatUntilDefendersWin>
+
+            <Defenders>
+                <Archers>350</Archers>
+            </Defenders>
+
+            <Attackers>
+                <Flank>
+                    <Direction>[1.0, 0.25]</Direction>
+                    <StandDistance>350.0</StandDistance>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"SiegeTowers"</Type>
+	                        <Number>1</Number>
+	                    </Battalion>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>200</Number>
+	                    </Battalion>
+	                    <Battalion>
+	                        <Type>"Archers"</Type>
+	                        <Number>50</Number>
+	                    </Battalion>
+	                </Battalions>
+
+                </Flank>
+
+                <Flank>
+                    <Direction>[-1.0, 0.25]</Direction>
+                    <StandDistance>350.0</StandDistance>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>200</Number>
+	                    </Battalion>
+	                    <Battalion>
+	                        <Type>"Archers"</Type>
+	                        <Number>50</Number>
+	                    </Battalion>
+	                    <Battalion>
+	                        <Type>"SiegeTowers"</Type>
+	                        <Number>1</Number>
+	                    </Battalion>
+	                </Battalions>
+
+                </Flank>
+
+               <Flank>
+                    <Direction>[0.5, 1.0]</Direction>
+                    <StandDistance>300.0</StandDistance>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>200</Number>
+	                    </Battalion>
+	                    <Battalion>
+	                        <Type>"Archers"</Type>
+	                        <Number>50</Number>
+	                    </Battalion>
+	                    <Battalion>
+	                        <Type>"SiegeTowers"</Type>
+	                        <Number>1</Number>
+	                    </Battalion>
+	                </Battalions>
+
+                </Flank>
+
+                <Flank>
+                    <Direction>[-0.5, 1.0]</Direction>
+                    <StandDistance>300.0</StandDistance>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>200</Number>
+	                    </Battalion>
+	                    <Battalion>
+	                        <Type>"Archers"</Type>
+	                        <Number>50</Number>
+	                    </Battalion>
+	                    <Battalion>
+	                        <Type>"SiegeTowers"</Type>
+	                        <Number>1</Number>
+	                    </Battalion>
+	                </Battalions>
+
+                </Flank>
+
+            </Attackers>
+
+        </Battle>
+
+       <Battle>
+            <Year>1300</Year>
+            <Simulations>10</Simulations>
+            <RepeatUntilDefendersWin>True</RepeatUntilDefendersWin>
+
+            <Defenders>
+                <Archers>700</Archers>
+            </Defenders>
+
+            <Attackers>
+                <Flank>
+                    <Direction>[1.0, 0.25]</Direction>
+                    <StandDistance>350.0</StandDistance>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"SiegeTowers"</Type>
+	                        <Number>1</Number>
+	                    </Battalion>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>300</Number>
+	                    </Battalion>
+	                    <Battalion>
+	                        <Type>"Archers"</Type>
+	                        <Number>75</Number>
+	                    </Battalion>
+	                </Battalions>
+
+                </Flank>
+
+                <Flank>
+                    <Direction>[-1.0, 0.25]</Direction>
+                    <StandDistance>350.0</StandDistance>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>300</Number>
+	                    </Battalion>
+	                    <Battalion>
+	                        <Type>"Archers"</Type>
+	                        <Number>75</Number>
+	                    </Battalion>
+	                    <Battalion>
+	                        <Type>"SiegeTowers"</Type>
+	                        <Number>1</Number>
+	                    </Battalion>
+	                </Battalions>
+
+                </Flank>
+
+               <Flank>
+                    <Direction>[0.5, 1.0]</Direction>
+                    <StandDistance>300.0</StandDistance>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>300</Number>
+	                    </Battalion>
+	                    <Battalion>
+	                        <Type>"Archers"</Type>
+	                        <Number>75</Number>
+	                    </Battalion>
+	                    <Battalion>
+	                        <Type>"SiegeTowers"</Type>
+	                        <Number>1</Number>
+	                    </Battalion>
+	                </Battalions>
+
+                </Flank>
+
+                <Flank>
+                    <Direction>[-0.5, 1.0]</Direction>
+                    <StandDistance>300.0</StandDistance>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>300</Number>
+	                    </Battalion>
+	                    <Battalion>
+	                        <Type>"Archers"</Type>
+	                        <Number>75</Number>
+	                    </Battalion>
+	                    <Battalion>
+	                        <Type>"SiegeTowers"</Type>
+	                        <Number>1</Number>
+	                    </Battalion>
+	                </Battalions>
+
+                </Flank>
+
+            </Attackers>
+
+        </Battle>
+
+       <Battle>
+            <Year>1600</Year>
+            <Simulations>10</Simulations>
+            <RepeatUntilDefendersWin>True</RepeatUntilDefendersWin>
+
+            <Defenders>
+                <Archers>1000</Archers>
+                <Cannons>50</Cannons>
+            </Defenders>
+
+            <Attackers>
+                <Flank>
+                    <Direction>[1.0, 0.25]</Direction>
+                    <StandDistance>350.0</StandDistance>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Cannons"</Type>
+	                        <Number>5</Number>
+	                    </Battalion>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>300</Number>
+	                    </Battalion>
+	                    <Battalion>
+	                        <Type>"Archers"</Type>
+	                        <Number>75</Number>
+	                    </Battalion>
+	                </Battalions>
+
+                </Flank>
+
+                <Flank>
+                    <Direction>[-1.0, 0.25]</Direction>
+                    <StandDistance>350.0</StandDistance>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>300</Number>
+	                    </Battalion>
+	                    <Battalion>
+	                        <Type>"Archers"</Type>
+	                        <Number>75</Number>
+	                    </Battalion>
+	                    <Battalion>
+	                        <Type>"Cannons"</Type>
+	                        <Number>5</Number>
+	                    </Battalion>
+	                </Battalions>
+
+                </Flank>
+
+               <Flank>
+                    <Direction>[0.5, 1.0]</Direction>
+                    <StandDistance>300.0</StandDistance>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>300</Number>
+	                    </Battalion>
+	                    <Battalion>
+	                        <Type>"Archers"</Type>
+	                        <Number>75</Number>
+	                    </Battalion>
+	                    <Battalion>
+	                        <Type>"Cannons"</Type>
+	                        <Number>5</Number>
+	                    </Battalion>
+	                </Battalions>
+
+                </Flank>
+
+                <Flank>
+                    <Direction>[-0.5, 1.0]</Direction>
+                    <StandDistance>250.0</StandDistance>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>300</Number>
+	                    </Battalion>
+	                    <Battalion>
+	                        <Type>"Archers"</Type>
+	                        <Number>75</Number>
+	                    </Battalion>
+	                    <Battalion>
+	                        <Type>"Cannons"</Type>
+	                        <Number>5</Number>
+	                    </Battalion>
+	                </Battalions>
+
+                </Flank>
+
+            </Attackers>
+
+        </Battle>
+
+    </BattleEvents>
+
+</Game>

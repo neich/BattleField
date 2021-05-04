@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--  Game: City expansion XML template -->
+<!--  All parameters are mandatory except for those that are marked as optional -->
+
+
+<Game>
+
+    <Type>CityExpansion</Type>				<!-- Available types: CityExpansion, Battle. Required -->
+
+    <!-- Time Range, in centuries. The starting year will be the first year of first century. [8,19] by default  -->
+    <TimeRange>[1,17]</TimeRange>
+
+        <!-- Battlefield settings -->
+    <Battlefield>
+        <Bounding>2000</Bounding>							<!-- Battlefield size (square). Required -->
+        <CellSize>10.0</CellSize>							<!-- Cellsize (square). Required -->
+
+       <Rivers>
+	       <Trace>
+	           <Width>50.0</Width>
+	           <Polyline>
+	               <Vertex>[0.0, 530.0]</Vertex>
+                   <Vertex>[350.0, 0.0]</Vertex>
+                </Polyline>
+            </Trace>
+        </Rivers>
+
+
+    </Battlefield>
+
+
+    <!-- Initial castle data -->
+    <Castle>
+    	<Orientation>[0.0, -1.0]</Orientation>	    		<!-- Castle front direction on the battlefield (used as reference to construct squared towers
+    															 Optional (taken from global settings) -->
+        <CenterCastle>False</CenterCastle>
+
+        <Shape>
+           <Vertex>
+                <Point>[1075.0, 955.0]</Point>
+                <TowerType>RoundedTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[994.0, 941.0]</Point>
+                <TowerType>RoundedTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[1013.0, 886.0]</Point>
+                <TowerType>RoundedTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[1027.0, 780.0]</Point>
+                <TowerType>RoundedTower</TowerType>
+            </Vertex>
+            <Vertex>
+                <Point>[1113.0, 800.0]</Point>
+                <TowerType>RoundedTower</TowerType>
+            </Vertex>
+        </Shape>
+
+
+    </Castle>
+
+    <!-- City evolution patterns (one or more) -->
+    <CityEvolutions>
+
+        <!-- South (Areny i Vilanova) -->
+		<Group>
+            <ID>1</ID>
+            <Evolutions>
+			    <Evolution>
+		            <TimeRange>[1, 100]</TimeRange>
+		            <Direction>[-170, 164]</Direction>
+		            <HousesPerYear>0.9</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[1028, 1080]</P1>
+		                <P2>[1310, 1254]</P2>
+		            </SegmentBase>
+		        </Evolution>
+			    <Evolution>
+		            <TimeRange>[1, 100]</TimeRange>
+		            <Direction>[90, -302]</Direction>
+		            <HousesPerYear>1</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[1100, 1100]</P1>
+		                <P2>[1300, 1220]</P2>
+		            </SegmentBase>
+		        </Evolution>
+			    <Evolution>
+		            <TimeRange>[1, 100]</TimeRange>
+		            <Direction>[104, -64]</Direction>
+		            <HousesPerYear>0.6</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[1110, 688]</P1>
+		                <P2>[1206, 822]</P2>
+		            </SegmentBase>
+		        </Evolution>
+			    <Evolution>
+		            <TimeRange>[1, 100]</TimeRange>
+		            <Direction>[138, 18]</Direction>
+		            <HousesPerYear>0.6</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[998, 968]</P1>
+		                <P2>[994, 1040]</P2>
+		            </SegmentBase>
+		        </Evolution>
+			    <Evolution>
+		            <TimeRange>[1, 100]</TimeRange>
+		            <Direction>[54, -38]</Direction>
+		            <HousesPerYear>0.4</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[1372, 1012]</P1>
+		                <P2>[1362, 806]</P2>
+		            </SegmentBase>
+		        </Evolution>
+			    <Evolution>
+		            <TimeRange>[1, 100]</TimeRange>
+		            <Direction>[-170, 164]</Direction>
+		            <HousesPerYear>0.4</HousesPerYear>
+		            <SegmentBase>
+		                <P1>[946, 1222]</P1>
+		                <P2>[1108, 1352]</P2>
+		            </SegmentBase>
+		        </Evolution>
+
+            </Evolutions>
+        </Group>
+    </CityEvolutions>
+
+    <!-- City expansion (new curtain wall) years (one or more). Optional -->
+    <CityExpansion>
+
+        <WallDimensions>[50.0, 150.0]</WallDimensions>		<!-- Minimum and maximum wall dimensions for each expansion. Optional -->
+
+
+        <Expansion>
+            <Year>100</Year>
+            <GroupID>1</GroupID>
+            <WallHeight>22.0</WallHeight>
+            <TowerHeight>25.0</TowerHeight>
+        </Expansion>
+
+        <Expansion>
+            <Year>1250</Year>
+            <GroupID>1</GroupID>
+            <WallHeight>10.0</WallHeight>
+            <TowerHeight>12.0</TowerHeight>
+        </Expansion>
+
+    </CityExpansion>
+
+
+    <!-- Battle events -->
+    <BattleEvents>
+
+        <Battle>
+            <Year>460</Year>
+            <Simulations>10</Simulations>
+            <RepeatUntilDefendersWin>True</RepeatUntilDefendersWin>
+            <ForceNoCastleEvolution>True</ForceNoCastleEvolution>
+
+
+            <Defenders>
+                <Archers>2600</Archers>
+            </Defenders>
+
+            <Attackers>
+                <Flank>
+                    <Direction>[438, -39]</Direction>
+                    <Origin>[78.0, 1212.0]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+                <Flank>
+                    <Direction>[408, 219]</Direction>
+                    <Origin>[183, 459]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+                <Flank>
+                    <Direction>[111, 234]</Direction>
+                    <Origin>[891, 63]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+                <Flank>
+                    <Direction>[-228, 189]</Direction>
+                    <Origin>[1974, 189]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+              <Flank>
+                    <Direction>[-262, -51]</Direction>
+                    <Origin>[1953, 1215]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+              </Flank>
+              <Flank>
+                    <Direction>[-225, -345]</Direction>
+                    <Origin>[1578, 1902]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+              </Flank>
+             <Flank>
+                    <Direction>[252, -308]</Direction>
+                    <Origin>[432, 1925]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+              </Flank>
+          </Attackers>
+        </Battle>
+
+
+       <Battle>
+            <Year>508</Year>
+            <Simulations>10</Simulations>
+            <RepeatUntilDefendersWin>True</RepeatUntilDefendersWin>
+            <ForceNoCastleEvolution>True</ForceNoCastleEvolution>
+
+
+            <Defenders>
+                <Archers>2600</Archers>
+            </Defenders>
+
+            <Attackers>
+                <Flank>
+                    <Direction>[438, -39]</Direction>
+                    <Origin>[78.0, 1212.0]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+                <Flank>
+                    <Direction>[408, 219]</Direction>
+                    <Origin>[183, 459]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+                <Flank>
+                    <Direction>[111, 234]</Direction>
+                    <Origin>[891, 63]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+                <Flank>
+                    <Direction>[-228, 189]</Direction>
+                    <Origin>[1974, 189]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+              <Flank>
+                    <Direction>[-262, -51]</Direction>
+                    <Origin>[1953, 1215]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+              </Flank>
+              <Flank>
+                    <Direction>[-225, -345]</Direction>
+                    <Origin>[1578, 1902]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+              </Flank>
+             <Flank>
+                    <Direction>[252, -308]</Direction>
+                    <Origin>[432, 1925]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+              </Flank>
+          </Attackers>
+        </Battle>
+
+
+
+
+       <Battle>
+            <Year>725</Year>
+            <Simulations>10</Simulations>
+            <RepeatUntilDefendersWin>True</RepeatUntilDefendersWin>
+            <ForceNoCastleEvolution>True</ForceNoCastleEvolution>
+
+
+            <Defenders>
+                <Archers>2600</Archers>
+            </Defenders>
+
+            <Attackers>
+                <Flank>
+                    <Direction>[438, -39]</Direction>
+                    <Origin>[78.0, 1212.0]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+                <Flank>
+                    <Direction>[408, 219]</Direction>
+                    <Origin>[183, 459]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+                <Flank>
+                    <Direction>[111, 234]</Direction>
+                    <Origin>[891, 63]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+                <Flank>
+                    <Direction>[-228, 189]</Direction>
+                    <Origin>[1974, 189]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+              <Flank>
+                    <Direction>[-262, -51]</Direction>
+                    <Origin>[1953, 1215]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+              </Flank>
+              <Flank>
+                    <Direction>[-225, -345]</Direction>
+                    <Origin>[1578, 1902]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+              </Flank>
+             <Flank>
+                    <Direction>[252, -308]</Direction>
+                    <Origin>[432, 1925]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+              </Flank>
+          </Attackers>
+        </Battle>
+
+
+       <Battle>
+            <Year>1209</Year>
+            <Simulations>10</Simulations>
+            <RepeatUntilDefendersWin>True</RepeatUntilDefendersWin>
+            <ForceNoCastleEvolution>True</ForceNoCastleEvolution>
+
+
+            <Defenders>
+                <Archers>2600</Archers>
+            </Defenders>
+
+            <Attackers>
+                <Flank>
+                    <Direction>[438, -39]</Direction>
+                    <Origin>[78.0, 1212.0]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+                <Flank>
+                    <Direction>[408, 219]</Direction>
+                    <Origin>[183, 459]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+                <Flank>
+                    <Direction>[111, 234]</Direction>
+                    <Origin>[891, 63]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+                <Flank>
+                    <Direction>[-228, 189]</Direction>
+                    <Origin>[1974, 189]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+              <Flank>
+                    <Direction>[-262, -51]</Direction>
+                    <Origin>[1953, 1215]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+              </Flank>
+              <Flank>
+                    <Direction>[-225, -345]</Direction>
+                    <Origin>[1578, 1902]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+              </Flank>
+             <Flank>
+                    <Direction>[252, -308]</Direction>
+                    <Origin>[432, 1925]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+              </Flank>
+          </Attackers>
+        </Battle>
+
+
+       <Battle>
+            <Year>1226</Year>
+            <Simulations>10</Simulations>
+            <RepeatUntilDefendersWin>True</RepeatUntilDefendersWin>
+            <ForceNoCastleEvolution>True</ForceNoCastleEvolution>
+
+            <Defenders>
+                <Archers>2600</Archers>
+            </Defenders>
+
+            <Attackers>
+                <Flank>
+                    <Direction>[438, -39]</Direction>
+                    <Origin>[78.0, 1212.0]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+                <Flank>
+                    <Direction>[408, 219]</Direction>
+                    <Origin>[183, 459]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+                <Flank>
+                    <Direction>[111, 234]</Direction>
+                    <Origin>[891, 63]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+                <Flank>
+                    <Direction>[-228, 189]</Direction>
+                    <Origin>[1974, 189]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+              <Flank>
+                    <Direction>[-262, -51]</Direction>
+                    <Origin>[1953, 1215]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+              </Flank>
+              <Flank>
+                    <Direction>[-225, -345]</Direction>
+                    <Origin>[1578, 1902]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+              </Flank>
+             <Flank>
+                    <Direction>[252, -308]</Direction>
+                    <Origin>[432, 1925]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+              </Flank>
+          </Attackers>
+        </Battle>
+
+
+       <Battle>
+            <Year>1239</Year>
+            <Simulations>10</Simulations>
+            <RepeatUntilDefendersWin>True</RepeatUntilDefendersWin>
+
+            <Defenders>
+                <Archers>2600</Archers>
+            </Defenders>
+
+            <Attackers>
+                <Flank>
+                    <Direction>[438, -39]</Direction>
+                    <Origin>[78.0, 1212.0]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+                <Flank>
+                    <Direction>[408, 219]</Direction>
+                    <Origin>[183, 459]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+                <Flank>
+                    <Direction>[111, 234]</Direction>
+                    <Origin>[891, 63]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+                <Flank>
+                    <Direction>[-228, 189]</Direction>
+                    <Origin>[1974, 189]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+                </Flank>
+              <Flank>
+                    <Direction>[-262, -51]</Direction>
+                    <Origin>[1953, 1215]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+              </Flank>
+              <Flank>
+                    <Direction>[-225, -345]</Direction>
+                    <Origin>[1578, 1902]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+              </Flank>
+             <Flank>
+                    <Direction>[252, -308]</Direction>
+                    <Origin>[432, 1925]</Origin>
+
+				    <Battalions>
+	                    <Battalion>
+	                        <Type>"Infantry"</Type>
+	                        <Number>400</Number>
+	                    </Battalion>
+                        <Battalion>
+                            <Type>"Archers"</Type>
+                            <Number>100</Number>
+                        </Battalion>
+
+	                </Battalions>
+
+              </Flank>
+          </Attackers>
+        </Battle>
+
+
+    </BattleEvents>
+
+
+
+
+</Game>
+

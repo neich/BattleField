@@ -1,0 +1,72 @@
+START Event: BattleEvent
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 357.5559046 secs
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 431.1348927 secs
+Event: BattleEvent, Message: Battle event finished, TIME: 789.7186429 secs
+START Event: BattleEvent
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 403.7450256 secs
+Event: BattleEvent, Message: Battle event finished, TIME: 405.0676912 secs
+START Event: BattleEvent
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 446.8941795 secs
+Event: BattleEvent, Message: Battle event finished, TIME: 448.0574217 secs
+START Event: BattleEvent
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 454.4705609 secs
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 388.6534091 secs
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 389.6190854 secs
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 414.0266169 secs
+Event: BattleEvent, Message: Battle event finished, TIME: 1648.001032 secs
+START Event: BattleEvent
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 383.6030793 secs
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 368.3922564 secs
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 372.4083263 secs
+Event: BattleEvent, Message: Battle event finished, TIME: 1125.8970359 secs
+START Event: BattleEvent
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 397.7723583 secs
+Event: BattleEvent, Message: Battle event finished, TIME: 398.5782733 secs
+START Event: BattleEvent
+START Event: Simulation batch
+START Event: BattleEvent
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 829.1891263 secs
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 1073.058103 secs
+Event: BattleEvent, Message: Battle event finished, TIME: 1904.4389444 secs
+START Event: BattleEvent
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 626.9590604 secs
+Event: BattleEvent, Message: Battle event finished, TIME: 629.2039582 secs
+START Event: BattleEvent
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 424.3927561 secs
+Event: BattleEvent, Message: Battle event finished, TIME: 425.5916073 secs
+START Event: BattleEvent
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 417.2198006 secs
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 406.3129581 secs
+Event: BattleEvent, Message: Battle event finished, TIME: 824.7909482 secs
+START Event: BattleEvent
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 415.9458188 secs
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 422.7618137 secs
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 394.5841926 secs
+Event: BattleEvent, Message: Battle event finished, TIME: 1234.7302814 secs
+START Event: BattleEvent
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 425.0260732 secs
+START Event: Simulation batch
+Event: Simulation batch, Message: Finished simulation batch of 10, TIME: 373.3067239 secs
+Event: BattleEvent, Message: Battle event finished, TIME: 799.1830008 secs

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--  Game: City expansion XML template -->
+<!--  All parameters are mandatory except for those that are marked as optional -->
+
+
+<Game>
+    
+    <Type>CityExpansion</Type>				<!-- Available types: CityExpansion, Battle. Required -->
+    
+    <!-- Time Range, in centuries. The starting year will be the first year of first century. [8,19] by default  -->
+    <TimeRange>[9,13]</TimeRange>
+    
+    
+    <!-- Battlefield settings -->
+    <Battlefield>
+        <Bounding>2000.0</Bounding>							<!-- Battlefield size (square). Required -->
+        <CellSize>10.0</CellSize>							<!-- Cellsize (square). Required -->
+    </Battlefield>
+    
+    
+    <!-- Initial castle data -->
+    <Castle>
+    	<Orientation>[0.0, -1.0]</Orientation>	    		<!-- Castle front direction on the battlefield (used as reference to construct squared towers
+    															 Optional (taken from global settings) -->
+        
+        <!-- Set of initial houses. The curtain wall is constructed from them. Required -->
+        <OldCity>
+            <House>[100.0, 250.0]</House>					<!-- House 2D central point. See global settings to configure the house size -->
+            <House>[110.0, 300.0]</House>
+            <House>[120.0, 350.0]</House>
+            <House>[150.0, 300.0]</House>
+            <House>[160.0, 340.0]</House>
+            <House>[180.0, 270.0]</House>
+            <House>[150.0, 250.0]</House>
+            <House>[230.0, 330.0]</House>
+            <House>[200.0, 230.0]</House>
+            <House>[200.0, 292.0]</House>
+            <House>[330.0, 250.0]</House>
+            <House>[290.0, 250.0]</House>
+            <House>[255.0, 343.0]</House>
+            <House>[280.0, 304.0]</House>
+            <House>[238.0, 250.0]</House>
+            <House>[243.0, 280.0]</House>
+       </OldCity>
+        
+        
+    </Castle>
+    
+    
+    <!-- City evolution patterns (one or more) -->
+    <CityEvolutions>
+        
+		<Group>
+            <ID>1</ID>
+            <Evolutions>
+                <Evolution>
+                    <TimeRange>[800, 1300]</TimeRange>				<!-- Time range in years. Required -->
+                    <Direction>[-0.7, -0.7]</Direction>				<!-- Expansion direction (2D vector). Required -->
+                    <HousesPerYear>1</HousesPerYear>				<!-- Houses per year. More houses, more the city grows. 1 by default -->
+                </Evolution>
+
+	        </Evolutions>
+   		</Group>
+
+
+		<Group>
+            <ID>2</ID>
+            <Evolutions>
+
+                <Evolution>
+                    <TimeRange>[1000, 1300]</TimeRange>
+                    <Direction>[-0.7, -0.7]</Direction>
+                    <HousesPerYear>1</HousesPerYear>
+                </Evolution>
+ 	        </Evolutions>
+   		</Group>
+
+	</CityEvolutions>
+    
+    
+    
+    
+    <!-- City expansion (new curtain wall) years (one or more). Optional -->
+    <CityExpansion>
+        
+        <WallDimensions>[80.0, 150.0]</WallDimensions>		<!-- Minimum and maximum wall dimensions for each expansion. Optional -->
+        
+        <Expansion>
+            <Year>990</Year>
+            <GroupID>1</GroupID>
+        </Expansion>
+
+        <Expansion>
+            <Year>1190</Year>
+            <GroupID>2</GroupID>
+        </Expansion>
+
+    </CityExpansion>
+    
+  
+    
+    
+    
+</Game>

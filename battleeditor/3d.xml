@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<Export>
+    <ExportFilePath>/home/mussoltrek/KTorrent/</ExportFilePath>
+    <Walls>0</Walls>
+    <Towers>1</Towers>
+    <StarFortress>
+        <Ravelins>0</Ravelins>
+        <HalfMoons>0</HalfMoons>
+        <CovertWay>1</CovertWay>
+    </StarFortress>
+    <Houses>
+        <Activate>0</Activate>
+        <ExportToExtraFile>1</ExportToExtraFile>
+        <ExportExtraFileSufix>_housess</ExportExtraFileSufix>
+    </Houses>
+</Export>
