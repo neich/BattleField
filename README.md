@@ -1,1 +1,1 @@
-This is th code use to produce the results of the paper (Simulating the Evolution of Ancient Fortified Cities)[https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.13897]. The status of the code is, at best, alpha. USE AT YOUR OWN RISK
+This is the code used to produce the results of the paper [Simulating the Evolution of Ancient Fortified Cities](https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.13897). The status of the code is, at best, alpha. USE AT YOUR OWN RISK
